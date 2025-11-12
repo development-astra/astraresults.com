@@ -40,12 +40,12 @@
 /* Custom Fonts */
 @font-face {
   font-family: "integral-cf";
-  src: url("../../assets/fonts/integral-cf/integral-cf-bold.woff2") format("woff2"),
-    url("../../assets/fonts/integral-cf/integral-cf-bold.woff") format("woff"),
-    url("../../assets/fonts/integral-cf/integral-cf-bold.ttf") format("truetype"),
-    url("../../assets/fonts/integral-cf/integral-cf-bold.eot") format("embedded-opentype"),
-    url("../../assets/fonts/integral-cf/integral-cf-bold.svg") format("svg"),
-    url("../../assets/fonts/integral-cf/integral-cf-bold.otf") format("opentype");
+  src: url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.woff2") format("woff2"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.woff") format("woff"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.ttf") format("truetype"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.eot") format("embedded-opentype"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.svg") format("svg"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
