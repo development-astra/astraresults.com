@@ -1381,9 +1381,13 @@ form button.btn:hover {
 # Trusted Partners Section
 --------------------------------------------------------------*/
 .trusted-partnership {
+  margin-top: -2%;
   background-color: #fff;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+}
+
+.trusted-partnership .container-fluid {
+  max-width: calc(100% - 50px);
+  margin: 0 auto;
 }
 
 .trusted-partnership h6 {
@@ -1405,7 +1409,7 @@ form button.btn:hover {
 }
 
 .partner-logo {
-  max-height: 70px;
+  max-height: 100px;
   opacity: 0.8;
   transition: 0.3s ease;
 }
@@ -1614,6 +1618,10 @@ form button.btn:hover {
 /*--------------------------------------------------------------
 # Marketing Consultation Section
 --------------------------------------------------------------*/
+.consultation-section {
+  overflow: visible;
+}
+
 .consultation-section .container-fluid {
   display: flex;
   align-items: stretch;
@@ -1639,8 +1647,68 @@ form button.btn:hover {
   color: transparent;
 }
 
-.consultation-form {
-  border-radius: 1rem;
+.consultation-section .content p {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.consultation-section .consultation-form {
+  position: relative;
+  margin-top: -50px;
+  max-width: 500px;
+  border-top: 30px solid #FFBC01;
+  border-radius: 12px;
+}
+
+.consultation-section .consultation-form .letter-spacing {
+  position: relative;
+  margin-top: -50px;
+  font-family: "Mona Sans", sans-serif;
+  color: #000000;
+  letter-spacing: 3px;
+  text-align: center;
+  z-index: 2;
+}
+
+.consultation-section .consultation-form h2 {
+  font-family: "integral-cf", sans-serif;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+.consultation-section .consultation-form p.text-muted {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  color: #070513 !important;
+  text-transform: uppercase;
+}
+
+.consultation-section .consultation-form .btn {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to bottom, #FFD84D, #FFB800);
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.consultation-section .consultation-form .btn-warning:hover {
+  background: linear-gradient(to bottom, #FFB800, #FF9E00);
+  transform: translateY(-2px);
+}
+
+.consultation-section .consultation-form input,
+.consultation-section .consultation-form textarea {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+}
+
+.consultation-section .consultation-form input:focus,
+.consultation-section .consultation-form textarea:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 184, 0, 0.3);
 }
 
 .call-box {
@@ -1649,9 +1717,4 @@ form button.btn:hover {
 
 .text-warning {
   color: #ffc107 !important;
-}
-
-.btn-warning {
-  background: linear-gradient(to right, #ffd54f, #ffb300);
-  border: none;
 }
