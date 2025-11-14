@@ -2028,7 +2028,6 @@ form button.btn:hover {
     display: none;
   }
 
-<<<<<<< HEAD
   .consultation-section .consult-card.mobile {
     display: block;
     position: absolute;
@@ -2081,8 +2080,7 @@ form button.btn:hover {
     padding: 12px;
   }
 }
-=======
+
 .text-warning {
   color: #ffc107 !important;
 }
->>>>>>> f260848d1b5917e541c5b5825661274667272896
