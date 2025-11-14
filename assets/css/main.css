@@ -242,6 +242,25 @@ h6 {
   z-index: 997;
 }
 
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 0 !important;
+  }
+
+  .header .container-fluid {
+    padding: 0 !important;
+  }
+
+  .header .container-fluid .row {
+    margin: 0 !important;
+  }
+
+  .header .mobile-head {
+    padding: 0 !important;
+    max-width: calc(100% - 0px);
+  }
+}
+
 .header .container-fluid {
   max-width: calc(100% - 50px);
   margin: 0 auto;
@@ -269,40 +288,7 @@ h6 {
   color: var(--accent-color);
 }
 
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-size: 14px;
-  padding: 8px 25px;
-  margin: 0 0 0 30px;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
-
-@media (max-width: 1200px) {
-  .header .logo {
-    order: 1;
-  }
-
-  .header .btn-getstarted,
-  .header .btn-getstarted:focus {
-    order: 2;
-    margin: 0 15px 0 0;
-    padding: 6px 15px;
-  }
-
-  .header .navmenu {
-    order: 3;
-  }
-}
-
+/* Desktop Call Button */
 .call-btn {
   display: inline-flex;
   flex-direction: column;
@@ -316,7 +302,6 @@ h6 {
   transition: 0.3s ease;
 }
 
-/* Top text */
 .call-btn .small-text {
   font-family: "Mona Sans", sans-serif;
   font-size: 12px;
@@ -325,7 +310,6 @@ h6 {
   letter-spacing: 7px !important;
 }
 
-/* Phone number text */
 .call-btn .big-text {
   font-family: "integral-cf", sans-serif;
   font-size: 28px;
@@ -338,28 +322,136 @@ h6 {
   color: transparent;
 }
 
-/* Hover effect */
 .call-btn:hover {
   background: #222;
   border-color: #ffce39;
   transform: scale(1.03);
 }
 
-/* Hide desktop CTA on mobile */
-@media (max-width: 767px) {
-  .call-btn {
+/* Mobile Head */
+.mobile-head {
+  display: none;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+
+  /* Hide desktop elements */
+  .call-btn,
+  .logo.desktop-logo {
     display: none !important;
+  }
+
+  /* Make container-fluid block on mobile */
+  .header .container-fluid {
+    display: block !important;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* Show mobile head */
+  .mobile-head {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0 auto;
+  }
+
+  /* Each column inside mobile-head */
+  .mobile-head .col-md-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  /* Center the logo image */
+  .mobile-head .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 180px;
+    /* adjust as needed */
+    height: auto;
+  }
+
+  /* Center mobile CTA button */
+  .mobile-head .cta-btn-mobile {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 
-/* Hide mobile CTA on desktop */
-@media (min-width: 768px) {
-  .cta-btn-mobile {
-    display: none !important;
+.cta-mobile-btn {
+  background: linear-gradient(to bottom, #ffd74a, #f7b800);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #000;
+  font-family: Arial, sans-serif;
+  border-radius: 4px;
+}
+
+.cta-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cta-number {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+/* Mobile responsiveness */
+.mobile-cta-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  background: linear-gradient(to bottom, #ffd74a, #f7b800);
+  color: #000;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+
+  padding: 1px 0;
+  font-weight: 900;
+  border-radius: 0;
+}
+
+.cta-label {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cta-number {
+  font-family: "integral-cf", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/* Extra mobile refinement */
+@media (max-width: 420px) {
+  .cta-number {
+    font-size: 20px;
   }
 }
 
-
+/* Optional: Add scroll effect */
 .scrolled .header {
   background-color: #070513;
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
@@ -1101,6 +1193,31 @@ section,
   z-index: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .hero {
+    margin-top: -155px;
+  }
+
+  .hero .container-fluid .content img {
+    margin-top: 130px;
+    width: 60%;
+  }
+
+  .hero .container-fluid .content h2 {
+    font-size: 20px;
+  }
+
+  .hero .container-fluid .content h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  /* Contact Form */
+  .hero .contact-form {
+    display: none;
+  }
+}
+
 .hero .hero-overlay {
   position: absolute;
   top: 0;
@@ -1366,74 +1483,6 @@ form button.btn:hover {
 
   form p {
     font-size: 13px;
-  }
-}
-
-
-/* ============================================================
-   📱 MOBILE FIXES (max-width: 767px)
-   — Desktop remains 100% untouched
-============================================================ */
-
-@media (max-width: 767px) {
-
-  .hero {
-    min-height: auto !important;
-    padding: 20px 0 !important;
-    margin-top: 0 !important;
-    display: block !important;
-  }
-
-  .hero .container-fluid .row {
-    flex-direction: column-reverse !important;
-    text-align: center !important;
-  }
-
-  .hero .container-fluid .content h1 {
-    font-size: 34px !important;
-    line-height: 1.2 !important;
-  }
-
-  .hero .container-fluid .content h2 {
-    font-size: 24px !important;
-  }
-
-  .hero .contact-form {
-    position: static !important;
-    width: 100% !important;
-    margin-top: 25px !important;
-    padding: 20px !important;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  .hero .contact-form .form-control {
-    padding: 10px 14px !important;
-    font-size: 15px !important;
-  }
-
-  .hero .contact-form button.btn-warning {
-    padding: 12px !important;
-    font-size: 15px !important;
-  }
-
-  .hero .contact-form .call-btn {
-    padding: 10px 20px !important;
-  }
-
-  .hero .contact-form .call-btn .big-number {
-    font-size: 22px !important;
-  }
-
-  #hero img.img-fluid {
-    margin-top: 25px !important;
-    max-width: 85% !important;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-background {
-    height: 40vh !important;
   }
 }
 
