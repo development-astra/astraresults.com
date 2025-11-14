@@ -40,12 +40,12 @@
 /* Custom Fonts */
 @font-face {
   font-family: "integral-cf";
-  src: url("/assets/fonts/integral-cf/integral-cf-bold.woff2") format("woff2"),
-    url("/assets/fonts/integral-cf/integral-cf-bold.woff") format("woff"),
-    url("/assets/fonts/integral-cf/integral-cf-bold.ttf") format("truetype"),
-    url("/assets/fonts/integral-cf/integral-cf-bold.eot") format("embedded-opentype"),
-    url("/assets/fonts/integral-cf/integral-cf-bold.svg") format("svg"),
-    url("/assets/fonts/integral-cf/integral-cf-bold.otf") format("opentype");
+  src: url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.woff2") format("woff2"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.woff") format("woff"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.ttf") format("truetype"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.eot") format("embedded-opentype"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.svg") format("svg"),
+    url("https://astraresults.com/lp/general/assets/fonts/integral-cf/integral-cf-bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -950,7 +950,7 @@ section,
   position: absolute;
   width: 79%;
   margin-top: 2%;
-  background-image: url("/assets/img/contact-form-bg.webp");
+  background-image: url("../../assets/img/contact-form-bg.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1081,7 +1081,7 @@ section,
   border-radius: 16px;
   height: 80%;
   background:
-    url("/assets/img/hero-bg.webp") no-repeat center center/cover,
+    url("../../assets/img/hero-bg.webp") no-repeat center center/cover,
     linear-gradient(135deg, #FFE59E 0%, #FFBC01 100%);
   z-index: 0;
 }
@@ -1645,7 +1645,7 @@ form button.btn:hover {
   max-width: calc(100% - 20px);
   margin: 0 auto;
   border-radius: 40px;
-  background-image: url("/assets/img/what-we-do-bg.webp");
+  background-image: url("../../assets/img/what-we-do-bg.webp");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1812,7 +1812,7 @@ form button.btn:hover {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url("/assets/img/arrow-up.svg");
+  background-image: url("../../assets/img/arrow-up.svg");
   background-size: contain;
   background-repeat: no-repeat;
   text-indent: -9999px;
@@ -1839,7 +1839,7 @@ form button.btn:hover {
   min-height: 686px;
   margin: 0 auto;
   border-radius: 32px;
-  background-image: url("/assets/img/footer-bg.webp");
+  background-image: url("../../assets/img/footer-bg.webp");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2028,6 +2028,7 @@ form button.btn:hover {
     display: none;
   }
 
+<<<<<<< HEAD
   .consultation-section .consult-card.mobile {
     display: block;
     position: absolute;
@@ -2080,3 +2081,8 @@ form button.btn:hover {
     padding: 12px;
   }
 }
+=======
+.text-warning {
+  color: #ffc107 !important;
+}
+>>>>>>> f260848d1b5917e541c5b5825661274667272896
