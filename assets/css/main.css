@@ -415,33 +415,35 @@ h6 {
 }
 
 /* Mobile responsiveness */
-.mobile-cta-btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+@media screen and (max-width: 767px) {
+  .mobile-cta-btn {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 
-  background: linear-gradient(to bottom, #ffd74a, #f7b800);
-  color: #000;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
+    background: linear-gradient(to bottom, #ffd74a, #f7b800);
+    color: #000;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
 
-  padding: 1px 0;
-  font-weight: 900;
-  border-radius: 0;
-}
+    padding: 1px 0;
+    font-weight: 900;
+    border-radius: 0;
+  }
 
-.cta-label {
-  font-family: "Mona Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-}
+  .cta-label {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
 
-.cta-number {
-  font-family: "integral-cf", sans-serif;
-  font-size: 30px;
-  font-weight: 900;
+  .cta-number {
+    font-family: "integral-cf", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+  }
 }
 
 /* Extra mobile refinement */
@@ -1036,6 +1038,12 @@ section,
   margin-top: 10%;
 }
 
+@media screen and (max-width: 767px) {
+  .hero .container-fluid .content {
+    margin-top: 60%;
+  }
+}
+
 .hero .container-fluid .content h2 {
   font-family: "integral-cf", sans-serif;
   font-size: 40px;
@@ -1141,54 +1149,14 @@ section,
   background: linear-gradient(to right, #ffd54f, #ffb300);
 }
 
-@media (max-width: 767px) {
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .hero-carousel {
-    position: absolute;
-    top: 9%;
-    left: 0;
-    width: 100vw;
-    z-index: 5;
-  }
-
-  .hero-carousel .item img {
-    width: 50vw;
-    height: auto;
-    display: block;
-  }
-
-  .hero-container {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  .hero-content {
-    margin-top: 200px !important;
-    text-align: center;
-  }
-
-  .contact-form {
-    margin-top: 20px;
-  }
-}
-
 /* General */
 .hero .hero-background {
   position: absolute;
   inset: 10px;
   border-radius: 16px;
-  height: 80%;
+  height: 50%;
   background:
-    url("../../assets/img/hero-bg.webp") no-repeat center center/cover,
+    url("../../assets/img/hero-bg.webp") no-repeat top center/cover,
     linear-gradient(135deg, #FFE59E 0%, #FFBC01 100%);
   z-index: 0;
 }
@@ -1255,26 +1223,12 @@ section,
 
 @media (max-width: 767px) {
   .hero {
+    height: 1505px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-
-  .hero-carousel {
-    position: absolute;
-    top: 8%;
-    left: 0;
-    width: 100vw;
-    z-index: 5;
-  }
-
-  .hero-carousel .item img {
-    display: block;
-    object-fit: fill;
-    width: 100%;
-    border-radius: 10px;
   }
 
   .hero-container {
@@ -1486,6 +1440,110 @@ form button.btn:hover {
   }
 }
 
+/* Contact Form */
+.hero .consult-card-mobile {
+  position: absolute;
+  top: 87%;
+  width: 88vw;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.hero .consult-card-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .hero .consult-card-mobile {
+    display: block;
+  }
+}
+
+.hero .consult-card-mobile .card-header {
+  display: flex;
+  background: #ffd100;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px 20px 3px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 1px solid #ffd100;
+}
+
+.hero .consult-card-mobile .card-header h4 {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.hero .consult-card-mobile .card-body {
+  padding: 10px 30px 30px;
+}
+
+.hero .consult-card-mobile .card-body .consult-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.hero .consult-card-mobile .card-body .consult-subtitle {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.hero .consult-card-mobile .card-body form .form-label {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #070513;
+}
+
+.hero .consult-card-mobile .card-body form input {
+  border-radius: 0;
+  background-color: #F5F5F5;
+  border: 1px solid #F5F5F5;
+  height: 42px;
+}
+
+.hero .consult-card-mobile .card-body form textarea {
+  border-radius: 0;
+  background-color: #F5F5F5;
+  border: 1px solid #F5F5F5;
+}
+
+.hero .consult-card-mobile .card-body form .submit-btn {
+  background: linear-gradient(to bottom, #ffd100, #ffb900);
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(255, 185, 0, 0.4);
+  font-weight: bold;
+  padding: 14px;
+  width: 100%;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.hero .consult-card-mobile .card-body form .submit-btn i {
+  display: none;
+}
+
+.hero .consult-card-mobile .card-body form .submit-btn:hover {
+  box-shadow: 0 6px 15px rgba(255, 185, 0, 0.6);
+  transform: translateY(-2px);
+}
+
 /*--------------------------------------------------------------
 # General CTA Button
 --------------------------------------------------------------*/
@@ -1499,6 +1557,56 @@ form button.btn:hover {
 
 .btn-warning:hover {
   background: linear-gradient(90deg, #ffdb4d, #ffb300);
+}
+
+/*--------------------------------------------------------------
+# Team Gallery Slider Section
+--------------------------------------------------------------*/
+.clients .swiper-slide img {
+  opacity: 0.5;
+  transition: 0.3s;
+  filter: grayscale(100);
+}
+
+.clients .swiper-slide img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.clients .swiper-wrapper {
+  height: auto;
+}
+
+.clients .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+@media screen and (max-width: 767px) {
+  .hero-carousel {
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+  }
+
+  .hero-carousel .item img {
+    width: 50vw;
+    height: auto;
+    display: block;
+  }
 }
 
 /*--------------------------------------------------------------
