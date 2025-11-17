@@ -1596,7 +1596,7 @@ form button.btn:hover {
 @media screen and (max-width: 767px) {
   .hero-carousel {
     position: absolute;
-    top: 19%;
+    top: 27%;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
