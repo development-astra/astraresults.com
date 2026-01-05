@@ -2308,3 +2308,304 @@ section,
     margin-top: 2rem;
   }
 }
+
+/*--------------------------------------------------------------
+# Inner Hero Section
+--------------------------------------------------------------*/
+/* About Us */
+.inner-hero {
+  position: relative;
+  min-height: 520px;
+  padding: 150px 0 20px;
+  color: #ffffff;
+  background-image: url("/assets/img/bg/inner-hero-bg.webp");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 88px;
+  border-bottom-right-radius: 88px;
+  overflow: hidden;
+}
+
+.inner-hero .container-fluid {
+  padding-left: 60px!important;
+  padding-right: 60px!important;
+}
+
+/* Rating */
+.hero-rating {
+  font-size: 18px;
+  color: #d1d5db;
+}
+
+.hero-rating .stars {
+  color: #f5b400;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-rating span.first-g {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 24px;
+  color: #3074F0;
+}
+
+.hero-rating span.first-o {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 18px;
+  color: #E73124;
+}
+
+.hero-rating span.second-o {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 18px;
+  color: #FBB101;
+}
+
+.hero-rating span.second-g {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 18px;
+  color: #3074F0;
+}
+
+.hero-rating span.l {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 24px;
+  color: #239A40;
+}
+
+.hero-rating span.e {
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 18px;
+  color: #E73124;
+}
+
+/* Title */
+.hero-title {
+  color: #FFFFFF;
+  font-family: "integral-cf", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.hero-title span {
+  display: inline-block;
+  color: #f5b400;
+}
+
+/* Text */
+.hero-text {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #e5e7eb;
+  max-width: 750px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .inner-hero {
+    padding: 100px 0;
+    background-position: center;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .inner-hero {
+    padding: 80px 0;
+    text-align: left;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Astra Section
+--------------------------------------------------------------*/
+.about-astra {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.about-astra .container-fluid {
+  padding-left: 60px!important;
+  padding-right: 60px!important;
+}
+
+/* Title */
+.about-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #000326;
+  margin-bottom: 18px;
+}
+
+/* Yellow underline */
+.title-underline {
+  display: inline-block;
+  width: 320px;
+  height: 5px;
+  background-color: #f5b400;
+  border-radius: 4px;
+}
+
+/* Text */
+.about-astra p {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #353535;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-astra {
+    padding: 90px 0;
+  }
+
+  .about-title {
+    font-size: 2.3rem;
+  }
+
+  .about-astra p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-astra {
+    padding: 70px 0;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Brand Positioning Section
+--------------------------------------------------------------*/
+.brand-positioning {
+  position: relative;
+  padding: 20px;
+}
+
+.brand-positioning .container-fluid {
+  padding-left: 60px!important;
+  padding-right: 60px!important;
+  padding: 120px 0;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at bottom right, #f5b400 0%, #04062f 35%, #020321 70%);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Headings */
+.section-title {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #d1d5db;
+  max-width: 600px;
+}
+
+/* Content */
+.content-title {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.content-lead {
+  font-size: 1.05rem;
+  color: #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.brand-positioning p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+/* Image Stack */
+.image-stack {
+  position: relative;
+  min-height: 420px;
+}
+
+.image {
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.image-left {
+  width: 52%;
+  left: 0;
+  top: 0;
+}
+
+.image-right {
+  width: 62%;
+  right: 0;
+  bottom: 0;
+}
+
+/* Partners */
+.partners img {
+  height: 28px;
+  opacity: 0.9;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.partners img:hover {
+  opacity: 1;
+  filter: none;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .brand-positioning {
+    padding: 90px 0;
+  }
+
+  .image-stack {
+    min-height: 360px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .brand-positioning {
+    padding: 70px 20px;
+    border-radius: 24px;
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
