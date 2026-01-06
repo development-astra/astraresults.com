@@ -69,6 +69,10 @@
   --bs-gutter-x: 10rem;
 }
 
+.spacer {
+  height: 20px!important;
+}
+
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
@@ -605,7 +609,6 @@ h6 {
   font-size: 14px;
   padding: 80px 0 0;
   position: relative;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .footer .footer-content .logo {
@@ -2495,6 +2498,187 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Our Process Section
+--------------------------------------------------------------*/
+.our-process {
+  padding: 0 0 60px 0;
+  background-color: #ffffff;
+}
+
+.our-process .process-fluid {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+/* Keep mobile safe */
+@media (max-width: 575px) {
+  .our-process .process-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* Section label */
+.our-process .process-label {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: #000326;
+  text-transform: uppercase;
+}
+
+/* Card */
+.our-process .process-card {
+  height: 100%;
+  padding: 24px;
+  text-align: left;
+}
+
+.our-process .process-card h4 {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000326;
+  margin-bottom: 10px;
+}
+
+.our-process .process-card p {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #353535;
+}
+
+/* Icon */
+.our-process .process-card .icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #fff2cc;
+  color: #f5b400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .our-process {
+    padding: 90px 0;
+  }
+
+  .process-card {
+    text-align: center;
+  }
+
+  .icon-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .our-process {
+    padding: 70px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# The Astra Difference Section
+--------------------------------------------------------------*/
+.astra-difference {
+  padding: 40px 0;
+  background-color: transparent;
+}
+
+/* Container padding */
+.astra-difference .container-fluid {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Content wrapper */
+.astra-difference .content {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 0 40px;
+  border-bottom: 5px solid #eeeeee;
+  overflow: hidden;
+}
+
+/* Title */
+.astra-difference .difference-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #000326;
+  margin-bottom: 0;
+}
+
+/* Text */
+.astra-difference .difference-text {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #353535;
+  margin-bottom: 0;
+}
+
+/* Optional vertical spacing helper */
+.astra-difference .spacer {
+  height: 20px;
+}
+
+/* Tablet  */
+@media (max-width: 991px) {
+  .astra-difference .container-fluid {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .astra-difference .content {
+    padding: 20px 30px;
+  }
+
+  .astra-difference .difference-title {
+    margin-bottom: 20px;
+  }
+
+  .astra-difference .difference-icon {
+    left: 35%;
+  }
+}
+
+/* Mobile  */
+@media (max-width: 575px) {
+  .astra-difference .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .astra-difference .content {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .astra-difference .difference-title {
+    text-align: center;
+  }
+
+  .astra-difference .difference-text {
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Brand Positioning Section
 --------------------------------------------------------------*/
 .brand-positioning {
@@ -2514,75 +2698,75 @@ section,
 }
 
 /* Headings */
-.section-title {
+.brand-positioning .section-title {
   font-size: clamp(2rem, 3.6vw, 3rem);
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.15;
 }
 
-.section-subtitle {
-  font-size: 1rem;
-  color: #d1d5db;
-  max-width: 600px;
+/* Image Stack */
+.brand-positioning .image-stack {
+  position: relative;
+}
+
+.brand-positioning .image-stack img {
+  width: 100%;
+}
+
+/* Partners */
+.brand-positioning .partners img {
+  max-height: 48px;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.brand-positioning .partners img:hover {
+  opacity: 1;
+  filter: none;
+}
+
+.brand-positioning .partners img.microsoft {
+  max-height: 48px;
+}
+
+.brand-positioning .partners img.meta {
+  max-height: 36px;
+}
+
+.brand-positioning .partners img.shopify {
+  max-height: 42px;
+}
+
+.brand-positioning .partners img.callrail {
+  max-height: 40px;
+}
+
+.brand-positioning .partners img.google {
+  max-height: 48px;
 }
 
 /* Content */
-.content-title {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  font-weight: 700;
+.brand-positioning .content .content-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: 44px;
+  color: #FFFFFF;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
 
-.content-lead {
-  font-size: 1.05rem;
-  color: #e5e7eb;
+.brand-positioning .content .content-lead {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 28px;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
-.brand-positioning p {
-  font-size: 0.95rem;
+.brand-positioning .content p {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
   line-height: 1.7;
-  color: #d1d5db;
-}
-
-/* Image Stack */
-.image-stack {
-  position: relative;
-  min-height: 420px;
-}
-
-.image {
-  position: absolute;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-}
-
-.image-left {
-  width: 52%;
-  left: 0;
-  top: 0;
-}
-
-.image-right {
-  width: 62%;
-  right: 0;
-  bottom: 0;
-}
-
-/* Partners */
-.partners img {
-  height: 28px;
-  opacity: 0.9;
-  filter: grayscale(100%);
-  transition: 0.3s;
-}
-
-.partners img:hover {
-  opacity: 1;
-  filter: none;
+  color: #ffffff;
 }
 
 /* Responsive */
@@ -2591,7 +2775,7 @@ section,
     padding: 90px 0;
   }
 
-  .image-stack {
+  .brand-positioning .image-stack {
     min-height: 360px;
     margin-bottom: 40px;
   }
@@ -2603,9 +2787,97 @@ section,
     border-radius: 24px;
   }
 
-  .image {
+  .brand-positioning .image-stack .image {
     position: relative;
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# CTA Section
+--------------------------------------------------------------*/
+.cta {
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+/* Container padding */
+.cta .container-fluid {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+/* Content wrapper */
+.cta .cta-content {
+  position: relative;
+  padding: 40px 0;
+}
+
+.cta .cta-content .left-content {
+  position: relative;
+}
+
+.cta .cta-content .left-content::before {
+  content: "";
+  position: absolute;
+  top: -85px;
+  right: 170px;
+  width: 500px;
+  height: 500px;
+  background: url("/assets/img/general/chevrons.svg") top left / contain no-repeat;
+  z-index: 0;
+}
+
+.cta .cta-content .left-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headline */
+.cta .cta-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #04062f;
+  margin-bottom: 0;
+}
+
+/* Supporting text */
+.cta .cta-text {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  color: #353535;
+  margin-bottom: 20px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .cta .container-fluid {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .cta .cta-text {
+    margin-left: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .cta .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .cta .cta-title,
+  .cta .cta-text {
+    text-align: center;
+  }
+
+  .cta .cta-content {
+    text-align: center;
   }
 }
