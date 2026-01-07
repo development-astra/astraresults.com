@@ -2691,18 +2691,12 @@ section,
   padding-right: 60px!important;
   padding: 120px 0;
   border-radius: 32px;
-  background:
-    radial-gradient(circle at bottom right, #f5b400 0%, #04062f 35%, #020321 70%);
+  background-image: url("/assets/img/bg/brand-positioning-bg.webp");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   color: #ffffff;
   overflow: hidden;
-}
-
-/* Headings */
-.brand-positioning .section-title {
-  font-size: clamp(2rem, 3.6vw, 3rem);
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.15;
 }
 
 /* Image Stack */
