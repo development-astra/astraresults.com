@@ -1615,12 +1615,10 @@ section,
   margin-bottom: 16px;
 }
 
-.why-us .content ul li .star-icon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  background: url("/assets/img/general/star-icon.svg") center / contain no-repeat;
+.why-us .content ul li .star-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: #FFBC01;
 }
 
 .why-us .content ul li p {
