@@ -1557,8 +1557,8 @@ section,
 }
 
 .why-us .container-fluid {
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 70px!important;
+  padding-right: 70px!important;
 }
 
 /*
@@ -1649,15 +1649,7 @@ section,
 @media (max-width: 576px) {
   .why-us {
     margin-top: 0;
-    padding: 0;
-  }
-
-  .why-us .container-fluid {
-    padding: 0;
-  }
-
-  .why-us .section-title h2 {
-    font-size: 30px;
+    padding: 80px 0 60px;
   }
 
   .why-us .content ul li .d-flex {
@@ -1945,14 +1937,13 @@ section,
   background-color: transparent;
   border: none;
   margin-bottom: 15px;
-  padding: 0!important;
 }
 
 .services .mobile-services .accordion .accordion-item .accordion-header .accordion-button {
   /* background-color: color-mix(in srgb, var(--surface-color), transparent 80%); */
   background-color: transparent;
   font-family: "Mona Sans", sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   border-radius: 12px;
   border: 1px solid #ffb300;
@@ -1987,10 +1978,6 @@ section,
   box-shadow: none;
 }
 
-.services .mobile-services .accordion .accordion-item .accordion-collapse .accordion-body {
-  padding: 20px 0 0 0;
-}
-
 .services .mobile-services .accordion .accordion-item .accordion-collapse .accordion-body .card {
   background:
     radial-gradient(
@@ -2011,13 +1998,13 @@ section,
 }
 
 .services .mobile-services .accordion .accordion-item .accordion-collapse .accordion-body .card .card-content img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .services .mobile-services .accordion .accordion-item .accordion-collapse .accordion-body .card .card-content .card-title {
   font-family: "integral-cf", sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 15px;
   color: #ffffff;
@@ -2025,15 +2012,9 @@ section,
 
 .services .mobile-services .accordion .accordion-item .accordion-collapse .accordion-body .card .card-content .card-text {
   font-family: "Mona Sans", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #ffffff;
-}
-
-.services .mobile-services .accordion .accordion-item .accordion-collapse .accordion-body .card .service-card-cta-button {
-  background-color: #000326;
-  font-size: 18px;
-  width: 100%;
 }
 
 .services .mobile-services .accordion .accordion-item .accordion-collapse .accordion-body .card .service-card-cta-button .cta-icon {
