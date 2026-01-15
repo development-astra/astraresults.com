@@ -3078,17 +3078,21 @@ section,
   }
 
   /* Bottom row */
-  .footer-bottom .col-md-4 {
+  .footer .footer-bottom {
+    margin-top: 0!important;
+  }
+
+  .footer .footer-bottom .col-md-4 {
     text-align: start !important;
     margin-bottom: 1rem;
   }
 
-  .footer-copy {
+  .footer .footer-copy {
     font-size: 15px;
     line-height: 1.6;
   }
 
-  .footer-logo {
+  .footer .footer-logo {
     max-height: 90px;
   }
 }
