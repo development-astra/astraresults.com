@@ -287,7 +287,7 @@ h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 28px 14px!important;
+  padding: 12px 28px 16px!important;
   border-radius: 16px;
 
   font-family: "integral-cf", sans-serif;
@@ -406,7 +406,7 @@ h6 {
 
   .header .header-cta .get-started-btn {
     font-size: 20px;
-    padding: 12px 28px 14px;
+    padding: 12px 28px 16px;
     display: inline-flex;
   }
 
