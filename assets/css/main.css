@@ -287,7 +287,7 @@ h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 28px 16px;
+  padding: 12px 28px 14px!important;
   border-radius: 16px;
 
   font-family: "integral-cf", sans-serif;
