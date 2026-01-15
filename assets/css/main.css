@@ -108,21 +108,32 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* Section CTA Button
-------------------------------*/
+/*--------------------------------------------------------------
+# Section CTA Button
+--------------------------------------------------------------*/
 .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
   background: #FFBC01;
   color: #000;
+
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 900;
   font-size: 20px;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
+
   padding: 14px 18px 14px 26px;
   border-radius: 16px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
+
+  transition: background 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
 }
 
+/* Hover */
 .cta-button:hover {
   background: #ffca2c;
   transform: translateY(-2px);
@@ -130,65 +141,131 @@ h6 {
   color: #000;
 }
 
-/* Right Icon Container */
+/* Focus (Accessibility) */
+.cta-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 188, 1, 0.4);
+}
+
+/* Right Icon */
 .cta-button .cta-icon {
   width: 44px;
   height: 44px;
   background: #0a0f2c;
   border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #fff;
   font-size: 18px;
-  transition: all 0.3s ease;
+
+  transition: transform 0.3s ease;
 }
 
 .cta-button:hover .cta-icon {
   transform: translateX(4px);
 }
 
-@media screen and (max-width: 767px) {
+/* Tablet */
+@media (max-width: 767px) {
   .cta-button {
     font-size: 18px;
+    padding: 12px 16px 12px 22px;
   }
 }
 
-/* Service Card CTA Button
-------------------------------*/
+/* Mobile (Optional Enhancement) */
+@media (max-width: 576px) {
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-button .cta-icon {
+    display: none!important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Service Card CTA Button
+--------------------------------------------------------------*/
 .service-card-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  padding: 14px 18px 14px 26px;
+  border-radius: 16px;
+
   background: transparent;
   color: #ffffff;
+
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 900;
   font-size: 20px;
   letter-spacing: 0.5px;
-  width: 100%;
-  padding: 14px 18px 14px 26px;
-  border-radius: 16px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   text-transform: none;
-  transition: all 0.3s ease;
+  text-align: center;
+
+  transition: transform 0.3s ease,
+              color 0.3s ease;
 }
 
+/* Hover */
 .service-card-cta-button:hover {
-  background: transparent;
   transform: translateY(-2px);
   color: #ffffff;
 }
 
-/* Right Icon Container */
+/* Icon */
 .service-card-cta-button .cta-icon {
   width: 44px;
   height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: transparent;
   border-radius: 10px;
-  color: #fff;
+
+  color: #ffffff;
   font-size: 18px;
-  transition: all 0.3s ease;
+
+  transition: transform 0.3s ease;
 }
 
 .service-card-cta-button:hover .cta-icon {
   transform: translateX(4px);
+}
+
+/* Focus (Accessibility) */
+.service-card-cta-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+/* Tablet */
+@media (max-width: 767px) {
+  .service-card-cta-button {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .service-card-cta-button {
+    font-size: 16px;
+  }
+
+  .service-card-cta-button .cta-icon {
+    display: none;
+  }
 }
 
 /* PHP Email Form Messages
@@ -2315,22 +2392,20 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
-  padding: 100px 0 100px 50px;
+  padding: 0;
   background-image: url("/assets/img/general/services-bg.webp");
   background-size: cover;
-  background-position: left center;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
 .services .container-fluid {
-  padding-left: 50px!important;
-  padding-bottom: 150px!important;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .services .section-title {
-  position: relative;
-  top: 110px;
-  padding: 180px 50px 280px 50px;
+  padding: 130px 0 0px;
 }
 
 .services .section-title h2 {
@@ -2338,93 +2413,97 @@ section,
   font-family: "integral-cf", sans-serif;
   font-size: 48px;
   font-weight: 700;
-  color: #FFFFFF;
-}
-
-/* Tablet: <= 992px */
-@media (max-width: 992px) {
-  .services {
-    padding: 5rem 4% 5rem 4%;
-  }
-
-  .services .container-fluid {
-    padding-left: 0!important;
-    padding-bottom: 8rem !important;
-  }
-
-  .services .section-title {
-    top: 5rem;
-    padding: 8rem 4% 12rem 4%;
-  }
-
-  .services .section-title h2 {
-    width: 80%;
-    font-size: 2.5rem; /* ~40px */
-  }
-}
-
-/* Mobile: <= 768px */
-@media (max-width: 768px) {
-  .services {
-    padding: 4rem 3% 4rem 3%;
-    background-position: center top;
-  }
-
-  .services .container-fluid {
-    padding-left: 3% !important;
-    padding-bottom: 6rem !important;
-  }
-
-  .services .section-title {
-    top: 3rem;
-    padding: 6rem 3% 8rem 3%;
-  }
-
-  .services .section-title h2 {
-    width: 100%;
-    font-size: 2rem; /* ~32px */
-  }
-}
-
-/* Small Mobile: <= 480px */
-@media (max-width: 480px) {
-  .services {
-    padding: 3rem 2% 3rem 2%;
-  }
-
-  .services .container-fluid {
-    padding-left: 2% !important;
-    padding-bottom: 4rem !important;
-  }
-
-  .services .section-title {
-    top: 2rem;
-    padding: 4rem 2% 6rem 2%;
-  }
-
-  .services .section-title h2 {
-    font-size: 1.75rem; /* ~28px */
-  }
-}
-
-.services .services-list {
-  position: relative;
-  top: 180px;
+  color: #ffffff;
 }
 
 .services .mobile-services {
   display: none;
 }
 
-/* Tablet & below */
-@media (max-width: 1024px) {
+/* Laptop (992px – 1199px) */
+@media (max-width: 1199px) {
+  .services {
+    padding: 100px 0;
+  }
+
+  .services .container-fluid {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 120px;
+  }
+
+  .services .section-title {
+    padding: 120px 0 180px;
+  }
+
+  .services .section-title h2 {
+    width: 75%;
+    font-size: 42px;
+  }
+
+  .services .mobile-services {
+    display: none;
+  }
+}
+
+/* Tablet (576px – 991px) */
+@media (max-width: 991px) {
+  .services {
+    padding: 60px 0 20px 20px;
+    background-position: center;
+  }
+
+  .services .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 100px;
+  }
+
+  .services .section-title {
+    padding: 0 20px 0 0;
+    text-align: center;
+  }
+
+  .services .section-title h2 {
+    width: 100%;
+    font-size: 32px;
+  }
+
   .services .services-list {
     display: none;
   }
 
   .services .mobile-services {
     display: block;
-    padding-left: 0!important;
+    padding-top: 50px;
+  }
+}
+
+/* Mobile (≤576px) */
+@media (max-width: 576px) {
+  .services {
+    padding: 60px 0 20px 20px;
+  }
+
+  .services .container-fluid {
+    padding: 0;
+  }
+
+  .services .section-title {
+    padding: 0 20px 0 0;
+  }
+
+  .services .section-title h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .services .services-list {
+    display: none;
+  }
+
+  .services .mobile-services {
+    display: block;
   }
 }
 
@@ -2691,33 +2770,36 @@ section,
 # Stellar Results Section
 --------------------------------------------------------------*/
 .stellar-results {
+  padding: 0;
   background-image: url("/assets/img/general/stellar-results-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  color: #fff;
+  color: #ffffff;
   position: relative;
 }
 
 .stellar-results .container-fluid {
-  padding-left: 50px!important;
-  padding-right: 50px!important;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .stellar-title {
   font-family: "integral-cf", sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(32px, 4vw, 48px);
   font-weight: 800;
-  color: #fff;
   line-height: 1.1;
+  width: 80%;
+  color: #ffffff;
 }
 
 .stellar-text {
-  color: #d1d5ff;
-  font-size: 1rem;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 16px;
   line-height: 1.8;
-  margin-bottom: 1.25rem;
+  width: 80%;
+  color: #d1d5ff;
+  margin-bottom: 20px;
 }
 
 .stellar-btn {
@@ -2728,7 +2810,8 @@ section,
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
-  transition: 0.3s ease;
+  gap: 12px;
+  transition: all 0.3s ease;
 }
 
 .stellar-btn:hover {
@@ -2737,28 +2820,92 @@ section,
 }
 
 .stellar-btn-icon {
-  background: #000;
-  color: #fff;
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  display: inline-flex;
+  background: #000;
+  color: #fff;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* SINGLE IMAGE STYLING */
-
+/* Image */
 .stellar-main-image {
   max-width: 80%;
   border-radius: 28px;
+  display: block;
 }
 
-/* MOBILE TWEAKS */
+/* Laptop (992px – 1199px) */
+@media (max-width: 1199px) {
+  .stellar-results {
+    padding: 120px 0;
+  }
 
-@media (max-width: 991px) {
+  .stellar-results .container-fluid {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
   .stellar-main-image {
-    margin-top: 2rem;
+    max-width: 90%;
+  }
+}
+
+/* Tablet (576px – 991px) */
+@media (max-width: 991px) {
+  .stellar-results {
+    padding: 0;
+    text-align: center;
+  }
+
+  .stellar-results .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .stellar-title,
+  .stellar-text {
+    width: 100%;
+  }
+
+  .stellar-btn {
+    justify-content: center;
+  }
+
+  .stellar-main-image {
+    max-width: 100%;
+    margin: 32px auto 0;
+  }
+}
+
+/* Mobile (≤576px) */
+@media (max-width: 576px) {
+  .stellar-results {
+    padding: 80px 0;
+  }
+
+  .stellar-results .container-fluid {
+    padding: 20px;
+  }
+
+  .stellar-title {
+    font-size: 28px;
+  }
+
+  .stellar-text {
+    font-size: 18px;
+  }
+
+  .stellar-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+
+  .cta-icon {
+    display: none;
   }
 }
 
