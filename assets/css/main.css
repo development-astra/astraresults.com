@@ -1919,7 +1919,7 @@ section,
 
   .astra-brings p {
     font-size: 16px;
-    text-align: end;
+    text-align: center;
   }
 
   .astra-brings .additional-info p {
@@ -1927,8 +1927,18 @@ section,
     text-align: center;
   }
 
+  .astra-brings .experience h4 {
+    font-size: 14px;
+    text-align: end;
+  }
+
   .astra-brings .experience h2 {
     font-size: 28px;
+    text-align: end;
+  }
+
+  .astra-brings .experience p {
+    font-size: 18px;
     text-align: end;
   }
 
