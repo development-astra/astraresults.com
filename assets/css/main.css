@@ -2096,19 +2096,7 @@ section,
   padding-right: 70px;
 }
 
-/*
-# Inner Width Control (container-fluid safe)
-*/
-
-.why-us-inner {
-  margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-/*
-# Partner Brands Image
-*/
+/* Partner Brands Image */
 .why-us .partner-brands img {
   width: 100%;
   height: auto;
@@ -2117,14 +2105,13 @@ section,
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-/*
-# Content Typography
-*/
+/* Content Typography */
 .why-us .content h2 {
   font-family: "integral-cf", sans-serif;
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 700;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .why-us .content p {
@@ -2141,11 +2128,16 @@ section,
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #ffffff;
+  margin-bottom: 16px;
 }
 
-/*
-# Feature List
-*/
+/* Feature List */
+.why-us .content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 .why-us .content ul li {
   margin-bottom: 16px;
 }
@@ -2163,45 +2155,160 @@ section,
   margin-bottom: 0;
 }
 
-/*
-# Tablet & Below (≤ 991px)
-*/
-@media (max-width: 991px) {
+/*--------------------------------------------------------------
+# Responsive Adjustments
+--------------------------------------------------------------*/
+
+/* Desktop ≥1200px */
+@media (min-width: 1200px) {
+  .why-us {
+    margin-top: -120px;
+    padding: 160px 0 100px;
+    text-align: left;
+  }
+
+  .why-us .content ul li .d-flex {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .why-us .content ul li .star-icon {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+
+  .why-us .partner-brands .brand-wrap {
+    display: none;
+  }
+}
+
+/* Laptop 992px – 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .why-us {
+    margin-top: -100px;
+    padding: 140px 40px 80px;
+    text-align: left;
+  }
+
+  .why-us .partner-brands .brand-wrap {
+    display: none;
+  }
+}
+
+/* Tablet 577px – 991px */
+@media (min-width: 577px) and (max-width: 991px) {
   .why-us {
     margin-top: -80px;
-    padding: 120px 0 80px;
+    padding: 120px 24px 80px;
     text-align: center;
   }
 
   .why-us .content {
     margin-top: 0;
   }
+
+  .why-us .partner-brands img.single-img {
+    display: none;
+  }
+
+  .why-us .partner-brands .brand-wrap {
+    margin-top: -100px;
+    border-top: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+    border-left: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+  }
+
+  .why-us .partner-brands .brand-wrap .brand-logo {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+    border-bottom: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+    overflow: hidden;
+  }
+
+  .why-us .partner-brands .brand-wrap .brand-logo img {
+    padding: 15px;
+    max-width: 80%;
+  }
 }
 
-/*
-# Mobile Only (≤ 576px)
-*/
+/* Mobile ≤576px */
 @media (max-width: 576px) {
   .why-us {
     margin-top: 0;
-    padding: 0;
+    padding: 10px 16px;
   }
 
   .why-us .container-fluid {
     padding: 0;
   }
 
-  .why-us .section-title h2 {
-    font-size: 30px;
+  .why-us .partner-brands img.single-img {
+    display: none;
+  }
+
+  .why-us .partner-brands .brand-wrap {
+    margin-top: -100px;
+    border-top: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+    border-left: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+  }
+
+  .why-us .partner-brands .brand-wrap .brand-logo {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+    border-bottom: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+    overflow: hidden;
+  }
+
+  .why-us .partner-brands .brand-wrap .brand-logo img {
+    padding: 15px;
+    max-width: 80%;
+  }
+
+  .why-us .content h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .why-us .content p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .why-us .content h5 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
   }
 
   .why-us .content ul li .d-flex {
+    background: rgba(0, 3, 38, 0.6); /* Semi-transparent dark overlay */
+    padding: 14px;
+    border-radius: 12px;
+
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    backdrop-filter: blur(12px); /* Glass blur effect */
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border for depth */
+
+    transition: all 0.3s ease;
   }
 
   .why-us .content ul li .star-icon {
     margin-bottom: 6px;
+    margin-right: 0;
+  }
+
+  .why-us .content ul li p {
+    font-size: 18px;
   }
 }
 
