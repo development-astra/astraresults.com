@@ -1690,10 +1690,10 @@ section,
     width: 100%;
     justify-content: center;
 
-    font-size: 16px;
+    font-size: 18px;
     padding: 14px 18px;
     border-radius: 14px;
-    text-align: center;
+    text-align: center!important;
   }
 
   .hero .hero-content .hero-cta span:first-child {
