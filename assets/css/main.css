@@ -1382,13 +1382,13 @@ section,
 /* Mobile (≤576px) */
 @media (max-width: 576px) {
   .hero {
-    padding: 100px 0;
-    min-height: 90vh;
+    padding: 150px 0;
+    min-height: 80vh;
   }
 
   /* Disable video for performance */
   .hero .hero-background video {
-    display: none;
+    display: block;
   }
 }
 
@@ -1793,7 +1793,7 @@ section,
 
   .clients {
     padding: 0 16px;
-    bottom: 16px;
+    bottom: 40px;
   }
 }
 
