@@ -3080,6 +3080,7 @@ section,
   /* Bottom row */
   .footer .footer-bottom {
     margin-top: 0!important;
+    padding-top: 0!important;
   }
 
   .footer .footer-bottom .col-md-4 {
@@ -3125,7 +3126,7 @@ section,
 /* Mobile */
 @media (max-width: 576px) {
   .footer-bottom {
-    padding-top: 2rem;
+    padding-top: 0;
   }
 }
 
