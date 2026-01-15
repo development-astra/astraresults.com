@@ -2922,7 +2922,7 @@ section,
   padding-right: 50px!important;
 }
 
-.footer-title {
+.footer .footer-title {
   font-family: "integral-cf", sans-serif;
   font-size: clamp(2rem, 3vw, 2.5rem);
   color: #000326;
@@ -2930,28 +2930,7 @@ section,
   line-height: 1.15;
 }
 
-.footer-btn {
-  background: #f5b400;
-  color: #000;
-  font-weight: 700;
-  padding: 14px 26px;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.footer-btn-icon {
-  background: #020321;
-  color: #fff;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-heading {
+.footer .footer-heading {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -2961,22 +2940,22 @@ section,
   font-weight: 700;
 }
 
-.footer-heading hr {
+.footer .footer-heading hr {
   flex-grow: 1;
   border: none;
   height: 2px;
   background: #020321;
 }
 
-.footer-links,
-.footer-legal {
+.footer .footer-links,
+.footer .footer-legal {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-links li,
-.footer-legal li {
+.footer .footer-links li,
+.footer .footer-legal li {
   margin-bottom: 10px;
 }
 
@@ -2988,17 +2967,17 @@ section,
   font-size: 18px;
 }
 
-.footer-links a:hover,
-.footer-legal a:hover {
+.footer .footer-links a:hover,
+.footer .footer-legal a:hover {
   text-decoration: underline;
 }
 
-.footer-contact p {
+.footer .footer-contact p {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
 }
 
-.footer-contact a {
+.footer .footer-contact a {
   font-family: "Mona Sans", sans-serif;
   font-size: 18px;
   color: #020321;
@@ -3006,7 +2985,7 @@ section,
   font-weight: 600;
 }
 
-.footer-bottom {
+.footer .footer-bottom {
   font-size: 18px;
 }
 
@@ -3014,16 +2993,136 @@ section,
   max-height: 150px;
 }
 
-/* MOBILE */
+.footer-logo-smaller {
+  display: none;
+}
 
-@media (max-width: 768px) {
-  .footer-legal {
-    margin-bottom: 1.5rem;
+/* Laptop (992px–1199px) */
+@media (max-width: 1199px) {
+  .footer .container-fluid {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .footer-title {
+    font-size: 2.2rem;
   }
 }
 
+/* Tablet (768px–991px) */
+@media (max-width: 991px) {
+  .footer-title {
+    text-align: start;
+  }
+
+  .footer .cta-button {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-heading {
+    justify-content: space-between;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer .footer-legal {
+    text-align: start;
+  }
+
+  .logo-container {
+    display: none!important;
+  }
+
+  .footer-logo-smaller {
+    display: block;
+    max-height: 90px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile (≤767px) */
+@media (max-width: 767px) {
+  .footer {
+    padding-bottom: 40px;
+  }
+
+  .footer .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* CTA */
+  .footer-title {
+    font-size: 1.5rem!important;
+    text-align: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .cta-button .cta-icon {
+    display: none;
+  }
+
+  /* Links */
+  .footer-links a,
+  .footer-legal a,
+  .footer-contact a {
+    font-size: 16px;
+  }
+
+  /* Bottom row */
+  .footer-bottom .col-md-4 {
+    text-align: start !important;
+    margin-bottom: 1rem;
+  }
+
+  .footer-copy {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .footer-logo {
+    max-height: 90px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer Bottom Decoration
+--------------------------------------------------------------*/
 .footer-bottom {
-  padding: 5rem 0 0;
+  padding-top: 5rem;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.footer-bottom-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .footer-bottom {
+    padding-top: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .footer-bottom {
+    padding-top: 2rem;
+  }
 }
 
 /*--------------------------------------------------------------
