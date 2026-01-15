@@ -1186,13 +1186,19 @@ section,
 }
 
 .section-title h2 {
-  font-size: 44px;
+  font-family: "integral-cf", sans-serif;
+  font-size: 44px; /* Desktop default */
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
-  padding-bottom: 0;
   position: relative;
   z-index: 2;
+}
+
+.section-title h2 .gradient-text {
+  background: linear-gradient(135deg, #FFBC01, #FFCA2C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section-title h4 {
@@ -1200,31 +1206,17 @@ section,
   top: 18%;
   left: 50%;
   transform: translateX(-50%);
-
   width: 100%;
   text-align: center;
   z-index: 1;
-
   font-family: "integral-cf", sans-serif;
-  font-size: 125px;
+  font-size: 125px; /* Desktop default */
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.17;
-
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.09),
-    rgba(255, 255, 255, 0.02)
-  );
+  background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.02));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-@media screen and (max-width: 768px) {
-  .section-title h4 {
-    font-size: 50px;
-  } 
-  
 }
 
 .section-title p {
@@ -1233,20 +1225,78 @@ section,
   font-family: "Mona Sans", sans-serif;
   font-size: 20px;
   font-weight: 400;
-  text-transform: normal;
   letter-spacing: 1px;
   color: #FFFFFF;
   z-index: 2;
 }
 
-@media (max-width: 575px) {
+/*--------------------------------------------------------------
+# Responsive Adjustments
+# Desktop, Laptop, Tablet, Mobile
+--------------------------------------------------------------*/
+
+/* Desktop ≥1200px */
+@media (min-width: 1200px) {
+  .section-title h2 {
+    font-size: 48px;
+  }
+
+  .section-title h4 {
+    font-size: 125px;
+  }
+
+  .section-title p {
+    font-size: 20px;
+  }
+}
+
+/* Laptop 992px – 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section-title h2 {
+    font-size: 42px;
+  }
+
+  .section-title h4 {
+    font-size: 100px;
+  }
+
+  .section-title p {
+    font-size: 18px;
+  }
+}
+
+/* Tablet 577px – 991px */
+@media (min-width: 577px) and (max-width: 991px) {
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  .section-title h4 {
+    font-size: 70px;
+  }
+
+  .section-title p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile ≤576px */
+@media (max-width: 576px) {
+  .section-title {
+    padding: 20px;
+  }
+
   .section-title h2 {
     font-size: 28px;
     margin-bottom: 15px;
   }
 
-  .section-title span {
-    font-size: 38px;
+  .section-title h4 {
+    font-size: 50px;
+  }
+
+  .section-title p {
+    font-size: 18px;
   }
 }
 
@@ -1515,7 +1565,7 @@ section,
   }
 
   .hero .hero-content h1 {
-    font-size: 1.75rem;
+    font-size: 1.95rem;
     line-height: 1.2;
   }
 
@@ -1640,7 +1690,7 @@ section,
     width: 100%;
     justify-content: center;
 
-    font-size: 14px;
+    font-size: 16px;
     padding: 14px 18px;
     border-radius: 14px;
     text-align: center;
