@@ -205,16 +205,16 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/" class="">Home</a></li>
+          <li><a href="/" class="active">Home</a></li>
           <li><a href="/coming-soon.html" class="">Services</a></li>
-          <li><a href="/about-us.html" class="active">About Us</a></li>
-          <li><a href="/coming-soon.html" class="">Contact Us</a></li>
+          <li><a href="/about-us.html" class="">About Us</a></li>
+          <li><a href="tel:+17866433036" class="">Contact Us</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav><!-- Navigation Menu -->
 
       <div class="header-cta">
-        <a href="tel:+15894514855" class="get-started-btn">
+        <a href="tel:+17866433036" class="get-started-btn d-none">
           Get Started
           <span class="cta-icon d-flex align-items-center justify-content-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 25 24" fill="none">
@@ -223,11 +223,22 @@
                 fill="white" />
             </svg>
           </span>
-        </a>
-      </div><!-- Header Call to Action Button -->
+        </a><!-- Get Started Button -->
+
+        <a href="tel:+17866433036" class="phone-number">
+          (+1) 786-643-3036
+          <span class="cta-icon d-flex align-items-center justify-content-center d-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 25 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.9111 10.3484C19.0375 10.3484 15.507 6.68003 15.507 2.65165V1H12.3292V2.65165C12.3292 5.58168 13.5654 8.33002 15.5054 10.3484H0.5V13.6517H15.5054C13.5654 15.67 12.3292 18.4183 12.3292 21.3484V23H15.507V21.3484C15.507 17.32 19.0375 13.6517 22.9111 13.6517H24.5V10.3484H22.9111Z"
+                fill="white" />
+            </svg>
+          </span>
+        </a><!-- Phone Number CTA -->
+      </div>
 
     </div>
-  </header>
+  </header><!-- End Of Header -->
 
   <main class="main">
 
@@ -590,7 +601,7 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- ======= Footer ======= -->
   <footer class="footer pt-5">
     <div class="container-fluid">
 
@@ -670,10 +681,10 @@
 
       </div>
 
-      <!-- BOTTOM -->
+      <!-- BOTTOM ROW -->
       <div class="row align-items-end mt-5 pt-4 border-bottom footer-bottom">
 
-        <div class="col-md-4">
+        <div class="col-sm-6 col-md-4 important-information">
           <ul class="footer-legal">
             <li><a href="#">Cookies Policy</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -683,7 +694,7 @@
           </ul>
         </div>
 
-        <div class="col-md-4 text-center">
+        <div class="col-sm-6 col-md-4 align-items-end copyrights">
           <p class="footer-copy mb-0">
             <script>document.write(new Date().getFullYear());</script> © <span>Copyright by</span>
             <strong class="fw-semibold">Astra Results Marketing.</strong>&nbsp;<span>All Rights
@@ -691,8 +702,8 @@
           </p>
         </div>
 
-        <div class="col-md-4 text-md-end text-center">
-          <img src="/assets/img/footer-logo.svg" alt="Astra Marketing" class="footer-logo">
+        <div class="col-md-4 footer-logo">
+          <img src="/assets/img/footer-logo.svg" alt="Astra Marketing" class="logo">
         </div>
 
       </div>
@@ -700,9 +711,10 @@
     </div>
   </footer><!-- End Footer -->
 
+  <!-- ======= Decorative Bottom ======= -->
   <section class="footer-bottom">
     <img src="/assets/img/footer-bottom-image.svg" alt="Footer Bottom Image" class="footer-bottom-image">
-  </section>
+  </section><!-- End Of Decorative Bottom -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
