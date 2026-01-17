@@ -1,11 +1,3 @@
-/**
-* Template Name: TravelTime
-* Template URL: https://bootstrapmade.com/traveltime-bootstrap-travel-template/
-* Updated: Jul 28 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 

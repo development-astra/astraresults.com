@@ -42,7 +42,8 @@
         <ul id="navLinks">
           <!-- Nav Links Dynamically Populated -->
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggler d-xl-none bi bi-list" data-bs-toggle="offcanvas" href="#offcanvasExample"
+          role="button" aria-controls="offcanvasExample"></i>
       </nav><!-- Navigation -->
 
       <div class="header-cta">
@@ -1965,6 +1966,52 @@
     </div>
   </div><!-- Modal: End Of Newsletter Form -->
 
+  <!-- ======= Offcanvas: Mobile Navigation ======= -->
+  <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <div class="offcanvas-title" id="offcanvasExampleLabel">
+        <span class="logo">
+          <a class="logo-link d-flex align-items-center" href="#"></a>
+        </span>
+      </div>
+
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+
+      <!-- Navigation Menu -->
+      <nav class="mobile-nav flex-grow-1">
+        <ul class="nav flex-column gap-2"></ul>
+      </nav>
+
+      <div class="call-to-action">
+        <div class="p-0 rounded-2 position-relative">
+          <div class="text-center card-body">
+            <img alt="" width="80" src="assets/img/general/rocket-launching.png">
+            <p class="fs-11 mt-2">Launch Your Journey Beyond<br>with <span class="gradient-text">Astra Marketing,
+                Inc.</span></p>
+            <div class="d-grid gap-2">
+              <a role="button" tabindex="0" href="tel:+17866433036" target="_blank"
+                class="btn-primary btn btn-primary btn-sm">Explore
+                Now!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="offcanvas-footer py-3">
+      <!-- Footer -->
+      <p class="footer-copy mb-0 text-center">
+        <span id="footerYear"></span> © <span>Copyright by</span>
+        <strong class="fw-semibold">Astra Results Marketing.</strong>
+        <span>All Rights Reserved</span>
+      </p>
+    </div>
+  </div><!-- Offcanvas: End Of Mobile Navigation -->
+
   <!-- Preloader -->
   <div id="preloader"></div>
 
@@ -1982,6 +2029,7 @@
 
   <!-- Dynamic Header Insertions -->
   <script src="assets/vendor/components/header.js"></script>
+  <script src="assets/vendor/components/offcanvas.js"></script>
   <script src="assets/vendor/components/footer.js"></script>
 
 </body>

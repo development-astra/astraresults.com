@@ -7,7 +7,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // ===== 1. FOOTER DATA =====
-  const footerData = {
+  footerData = {
     cta: {
       text: "Subscribe",
       href: "tel:+15894514855",

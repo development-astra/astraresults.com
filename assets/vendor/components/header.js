@@ -7,7 +7,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // ===== 1. HEADER DATA =====
-  const headerData = {
+  window.headerData = {
     logo: {
       // Inline SVG
       svg: `
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { text: "Home", href: "/" },
       { text: "Services", href: "/services.html" },
       { text: "About Us", href: "/about-us.html" },
-      { text: "Contact Us", href: "tel:+17866433036" },
+      { text: "Contact Us", href: "tel:+17866433036", },
     ],
 
     cta: {
