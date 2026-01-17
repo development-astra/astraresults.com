@@ -2533,7 +2533,7 @@ section,
 /* Tablet (576px – 991px) */
 @media (max-width: 991px) {
   .services {
-    padding: 60px 0 20px 20px;
+    padding: 60px 0 0 0;
     background-position: center;
   }
 
@@ -2566,7 +2566,7 @@ section,
 /* Mobile (≤576px) */
 @media (max-width: 576px) {
   .services {
-    padding: 60px 0 20px 20px;
+    padding: 60px 0 10px 0;
   }
 
   .services .container-fluid {
@@ -2574,7 +2574,7 @@ section,
   }
 
   .services .section-title {
-    padding: 0 20px 0 0;
+    padding: 0 20px;
   }
 
   .services .section-title h2 {
