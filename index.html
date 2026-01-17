@@ -34,22 +34,26 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <!-- Logo -->
       <a id="logoLink" href="/" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img id="logoImg" alt="Astra Results, Inc." />
-      </a>
+        <!-- Logo Dynamically Populated -->
+      </a><!-- Brand Logo -->
 
-      <!-- Navigation -->
       <nav id="navmenu" class="navmenu">
-        <ul id="navLinks"></ul>
+        <ul id="navLinks">
+          <!-- Nav Links Dynamically Populated -->
+        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      </nav><!-- Navigation -->
 
-      <!-- CTA -->
       <div class="header-cta">
-        <a id="ctaPrimary" class="get-started-btn d-none"></a>
-        <a id="ctaPhone" class="phone-number"></a>
-      </div>
+        <a id="ctaPrimary" class="get-started-btn d-none">
+          <!-- Dynamically Populated -->
+        </a>
+
+        <a id="ctaPhone" class="phone-number">
+          <!-- Dynamically Populated -->
+        </a>
+      </div><!-- CTA -->
 
     </div>
   </header>
@@ -1804,15 +1808,8 @@
             ASTRA
           </h2>
 
-          <a href="tel:+15894514855" class="cta-button d-inline-flex align-items-center">
-            <span class="me-3">Subscribe</span>
-            <span class="cta-icon d-flex align-items-center justify-content-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M22.9111 10.3484C19.0375 10.3484 15.507 6.68003 15.507 2.65165V1H12.3292V2.65165C12.3292 5.58168 13.5654 8.33002 15.5054 10.3484H0.5V13.6517H15.5054C13.5654 15.67 12.3292 18.4183 12.3292 21.3484V23H15.507V21.3484C15.507 17.32 19.0375 13.6517 22.9111 13.6517H24.5V10.3484H22.9111Z"
-                  fill="white" />
-              </svg>
-            </span>
+          <a id="footerCTA" class="cta-button d-inline-flex align-items-center">
+            <!-- CTA content populated dynamically -->
           </a><!-- CTA Button -->
         </div>
 
@@ -1825,24 +1822,14 @@
 
           <div class="row">
             <div class="col-md-6">
-              <ul class="footer-links">
-                <li><a href="/"><i class="bi bi-chevron-right me-2"></i>Home</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>About Us</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>Pay-Per-Click Advertising</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>Search Engine Optimization</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>E-Commerce</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>Video Production & Creative Marketing</a></li>
+              <ul id="footerLinksCol1" class="footer-links">
+                <!-- Links populated dynamically -->
               </ul>
             </div>
 
             <div class="col-md-6">
-              <ul class="footer-links">
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>Social Media Marketing</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>Business Consulting</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>AI Sales CSR</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>AI Sales Outbound Appointment Setting</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>AI Sales Inbound Appointment Setting</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right me-2"></i>Custom UI/UX web design and development</a></li>
+              <ul id="footerLinksCol2" class="footer-links">
+                <!-- Links populated dynamically -->
               </ul>
             </div>
           </div>
@@ -1855,19 +1842,8 @@
             <hr>
           </div>
 
-          <div class="footer-contact">
-            <h5><strong>Astra Headquarters</strong></h5>
-            <p>
-              1101 Brickell Ave,<br>
-              Miami, FL 33131
-            </p>
-
-            <p>
-              <a href="tel:+17866433036" class="mb-1">+1 786-643-3036</a>
-            </p>
-            <p>
-              <a href="mailto:info@astraresults.com">info@astraresults.com</a>
-            </p>
+          <div id="footerContacts" class="footer-contact">
+            <!-- Contacts populated dynamically -->
           </div>
         </div>
 
@@ -1877,25 +1853,20 @@
       <div class="row align-items-end mt-5 pt-4 border-bottom footer-bottom">
 
         <div class="col-sm-6 col-md-4 important-information">
-          <ul class="footer-legal">
-            <li><a href="#">Cookies Policy</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">End User License Agreement</a></li>
-            <li><a href="#">Acceptable Use Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+          <ul id="footerLegal" class="footer-legal">
+            <!-- Legal links populated dynamically -->
           </ul>
         </div>
 
         <div class="col-sm-6 col-md-4 align-items-end copyrights">
           <p class="footer-copy mb-0">
-            <script>document.write(new Date().getFullYear());</script> © <span>Copyright by</span>
-            <strong class="fw-semibold">Astra Results Marketing.</strong>&nbsp;<span>All Rights
-              Reserved</span>
+            <span id="footerYear"></span> © <span>Copyright by</span>
+            <strong class="fw-semibold">Astra Results Marketing.</strong>&nbsp;<span>All Rights Reserved</span>
           </p>
         </div>
 
         <div class="col-md-4 footer-logo">
-          <img src="/assets/img/footer-logo.svg" alt="Astra Marketing" class="logo">
+          <img id="footerLogo" src="" alt="Footer Logo" class="logo">
         </div>
 
       </div>
@@ -1942,6 +1913,7 @@
 
   <!-- Dynamic Header Insertions -->
   <script src="assets/vendor/components/header.js"></script>
+  <script src="assets/vendor/components/footer.js"></script>
 
 </body>
 

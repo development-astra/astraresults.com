@@ -254,5 +254,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ===== 5. INIT =====
   populateHeader();
-
 });
