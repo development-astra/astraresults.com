@@ -1,6 +1,6 @@
 RewriteEngine On
 
-# Allow directory index.html FIRST
+# Directory index priority
 DirectoryIndex index.html index.php
 
 # Redirect .html → clean URLs
@@ -11,17 +11,17 @@ RewriteRule ^ %1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
 
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-
-# IMPORTANT: let Apache serve real directories
+# Serve real directories before WordPress
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
