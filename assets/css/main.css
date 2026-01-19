@@ -3964,8 +3964,11 @@ section,
   }
 
   .our-process .process-card {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
+    justify-content: center;
   }
 
   .our-process .process-card .icon-box {
@@ -3974,6 +3977,7 @@ section,
   }
 
   .our-process .process-card h4 {
+    text-align: center!important;
     font-size: clamp(24px, 2.5vw, 24px);
   }
 
@@ -4084,7 +4088,12 @@ section,
   }
 
   .astra-difference .difference-title {
+    font-size: 28px;
     margin-bottom: 20px;
+  }
+
+  .astra-difference .difference-text {
+    margin-top: 25px;
   }
 
   .astra-difference .difference-icon {

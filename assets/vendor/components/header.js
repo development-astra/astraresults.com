@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navLinks: [
       { text: "Home", href: "/" },
-      { text: "Services", href: "/services/index.html" },
+      { text: "Services", href: "/services.html" },
       { text: "About Us", href: "/about-us.html" },
       { text: "Contact Us", href: "tel:+17866433036", },
     ],
