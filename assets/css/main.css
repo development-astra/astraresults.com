@@ -3890,10 +3890,17 @@ section,
   font-family: "Mona Sans", sans-serif;
   font-weight: 700;
   font-size: clamp(18px, 1.5vw, 24px);
+  text-transform: uppercase;
   letter-spacing: 2px;
   color: #000326;
   margin-bottom: 40px;
   text-align: center;
+}
+
+.our-process .process-description {
+  font-family: "Mona Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
 }
 
 .our-process .process-card {
@@ -4108,6 +4115,10 @@ section,
   .astra-difference .difference-title {
     text-align: center;
   }
+
+  .astra-difference .difference-title.ai-diff {
+    font-size: 28px;
+ }
 
   .astra-difference .difference-text {
     text-align: center;
@@ -4481,9 +4492,12 @@ section,
 
 /* TABLET: 577px – 991px */
 @media (min-width: 577px) and (max-width: 991px) {
+  .cta {
+    padding: 0;
+  }
+
   .cta .container-fluid {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
+    padding: 0 20px;
   }
 
   /* Stack columns vertically and center */
@@ -4499,14 +4513,13 @@ section,
   }
 
   .cta .cta-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .cta .cta-text {
-    font-size: 16px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 18px;
+    width: 100%;
+    margin: auto;
   }
 
   .cta .cta-button {
@@ -4706,5 +4719,522 @@ section,
   .what-we-do .card .card-body .card-text {
     font-size: 16px;
     line-height: 1.6rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sub-Services Section
+--------------------------------------------------------------*/
+.sub-services {
+  position: relative;
+  padding: 20px;
+  overflow: visible;
+}
+
+.sub-services .container-fluid {
+  height: 120vh;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 32px;
+  background-image: url("/assets/img/general/services-bg.webp");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.sub-services .section-title h2 {
+  width: 70%;
+  margin: auto;
+}
+
+.sub-services .section-title p {
+  width: 60%;
+  margin: auto;
+}
+
+.sub-services .section-title h4 {
+  margin-top: -70px;
+}
+
+.sub-services .services-slider {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+}
+
+.sub-services .services-slider .card {
+  background: linear-gradient(180deg, #0003269c 0%, #261c12bb 100%);
+  padding: 25px;
+  border: 4px solid #FFBC01;
+  border-radius: 24px;
+}
+
+.sub-services .services-slider .card .card-body .card-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+
+.sub-services .services-slider .card .card-body .card-text {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+/* Position nav at bottom-right */
+.sub-services .services-slider .owl-nav {
+  position: absolute;
+  bottom: -90px; 
+  right: 100px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+/* Style the nav buttons */
+.sub-services .services-slider .owl-nav button.owl-prev,
+.sub-services .services-slider .owl-nav button.owl-next {
+  background-color: #FFFFFF;
+  border: none;
+  width: 67px;
+  height: 62px;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%; 
+  color: transparent;
+  font-size: 0;
+}
+
+/* Prev button - your custom icon */
+.sub-services .services-slider .owl-nav button.owl-prev {
+  background-image: url('/assets/img/general/prev-button.svg');
+}
+
+/* Next button - your custom icon */
+.sub-services .services-slider .owl-nav button.owl-next {
+  background-image: url('/assets/img/general/next-button.svg');
+}
+
+/* Hover effect */
+.sub-services .services-slider .owl-nav button.owl-prev:hover,
+.sub-services .services-slider .owl-nav button.owl-next:hover {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Responsive Adjustments
+--------------------------------------------------------------*/
+
+/* DESKTOP: 1201px and above */
+@media (min-width: 1201px) {
+  .sub-services .content .content-title {
+    font-size: 44px;
+  }
+
+  .sub-services .content .content-lead {
+    font-size: 28px;
+  }
+
+  .sub-services .content p {
+    font-size: 20px;
+  }
+
+  .sub-services .brand-wrap {
+    display: none;
+  }
+
+  .sub-services .services-slider {
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 2;
+  }
+}
+
+/* LAPTOP: 992px – 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .sub-services .container-fluid {
+    height: 110vh;
+  }
+
+  .sub-services .section-title h2 {
+    width: 100%;
+    font-size: 34px;
+    margin: auto;
+  }
+
+  .sub-services .section-title p {
+    width: 60%;
+    margin: auto;
+  }
+
+  .sub-services .section-title h4 {
+    margin-top: -70px;
+  }
+
+  .sub-services .services-slider {
+    position: absolute;
+    left: 50%;
+    bottom: 90px;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 2;
+  }
+
+  .sub-services .services-slider .owl-nav {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(85%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  /* Style the nav buttons */
+  .sub-services .services-slider .owl-nav button.owl-prev,
+  .sub-services .services-slider .owl-nav button.owl-next {
+    width: 50px;
+    height: 40px;
+  }
+
+  .sub-services .services-slider .card {
+    padding: 10px;
+    height: 510px!important;
+  }
+
+  .sub-services .services-slider .card .card-body .card-header .service-icon svg {
+    width: 50px!important;
+    height: 50px!important;
+  }
+
+  .sub-services .services-slider .card .card-body .card-title {
+    font-size: 24px;
+  }
+
+  .sub-services .services-slider .card .card-body .card-text {
+    font-size: 18px;
+  }
+}
+
+/* TABLET: 577px – 991px */
+@media (min-width: 577px) and (max-width: 991px) {
+  .sub-services .container-fluid {
+    height: 105vh;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .sub-services .section-title h2 {
+    width: 100%;
+    font-size: 34px;
+    margin: auto;
+  }
+
+  .sub-services .section-title p {
+    width: 100%;
+    margin: auto;
+  }
+
+  .sub-services .section-title h4 {
+    margin-top: -70px;
+  }
+
+  .sub-services .services-slider {
+    position: absolute;
+    left: 50%;
+    bottom: 90px;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 2;
+  }
+
+  .sub-services .services-slider .owl-nav {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-20%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  /* Style the nav buttons */
+  .sub-services .services-slider .owl-nav button.owl-prev,
+  .sub-services .services-slider .owl-nav button.owl-next {
+    width: 50px;
+    height: 40px;
+  }
+
+  .sub-services .services-slider .card {
+    padding: 10px;
+    height: 510px!important;
+  }
+
+  .sub-services .services-slider .card .card-body .card-header .service-icon svg {
+    width: 50px!important;
+    height: 50px!important;
+  }
+
+  .sub-services .services-slider .card .card-body .card-title {
+    font-size: 24px;
+  }
+
+  .sub-services .services-slider .card .card-body .card-text {
+    font-size: 18px;
+  }
+}
+
+/* MOBILE: 0 – 576px */
+@media (max-width: 576px) {
+  .sub-services .container-fluid {
+    height: 110vh;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 24px;
+  }
+
+  .sub-services .section-title h2 {
+    width: 100%;
+    font-size: 28px;
+    margin: auto;
+  }
+
+  .sub-services .section-title p {
+    width: 100%;
+    margin: auto;
+  }
+
+  .sub-services .section-title h4 {
+    margin-top: -70px;
+  }
+
+  .sub-services .services-slider {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 2;
+  }
+
+  .sub-services .services-slider .owl-nav {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  /* Style the nav buttons */
+  .sub-services .services-slider .owl-nav button.owl-prev,
+  .sub-services .services-slider .owl-nav button.owl-next {
+    width: 80px;
+    height: 40px;
+  }
+
+  .sub-services .services-slider .card {
+    padding: 10px;
+    height: 510px!important;
+  }
+
+  .sub-services .services-slider .card .card-body .card-header .service-icon svg {
+    width: 50px!important;
+    height: 50px!important;
+  }
+
+  .sub-services .services-slider .card .card-body .card-title {
+    font-size: 24px;
+  }
+
+  .sub-services .services-slider .card .card-body .card-text {
+    font-size: 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Conclusion Section
+--------------------------------------------------------------*/
+.conclusion {
+  padding: 0;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.conclusion .container-fluid {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.conclusion .stellar-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  width: 80%;
+  color: #000326;
+}
+
+.conclusion .stellar-text {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  width: 80%;
+  color: #000326;
+  margin-bottom: 20px;
+}
+
+.conclusion .usecases {
+  max-width: 900px;
+  margin: auto;
+}
+
+.conclusion .usecases .usecase-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 75%;
+  margin-bottom: 28px;
+}
+
+.conclusion .usecases .usecase-item p {
+  font-family: "Mona Sans", sans-serif;
+  color: #070322;
+  font-size: 24px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.conclusion .usecases .usecase-item strong {
+  color: #070322;
+  font-weight: 700;
+}
+
+/* Image */
+.conclusion .stellar-main-image {
+  max-width: 80%;
+  border-radius: 28px;
+  display: block;
+}
+
+/* Laptop (992px – 1199px) */
+@media (max-width: 1199px) {
+  .conclusion .stellar-title {
+    font-size: 36px;
+  }
+
+  .conclusion .stellar-text {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .conclusion .usecases .usecase-item {
+    gap: 18px;
+  }
+
+  .conclusion .usecases .usecase-item .star svg {
+    width: 44px;
+    height: auto;
+  }
+}
+
+/* Tablet (576px – 991px) */
+@media (max-width: 991px) {
+  .conclusion .container-fluid {
+    padding: 0 20px;
+  }
+
+  .conclusion .row {
+    text-align: center;
+  }
+
+  .conclusion .stellar-title {
+    font-size: 32px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .conclusion .stellar-text {
+    font-size: 18px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .conclusion .usecases .usecases {
+    margin-top: 32px;
+  }
+
+  .conclusion .usecases .usecase-item {
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    margin: auto;
+  }
+
+  .conclusion .usecases .usecase-item p {
+    font-size: 20px;
+  }
+}
+
+/* Mobile (≤767px) */
+@media (max-width: 767px) {
+  .conclusion {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .conclusion .container-fluid {
+    padding: 0;
+  }
+
+  .conclusion .stellar-title {
+    font-size: 26px;
+    width: 100%;
+    margin: auto;
+    line-height: 1.3;
+  }
+
+  .conclusion .stellar-text {
+    font-size: 16px;
+    width: 100%;
+    margin: auto;
+    line-height: 1.7;
+  }
+
+  .conclusion .usecases .usecase-item {
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+    gap: 14px;
+  }
+
+  .conclusion .usecases .usecase-item .star svg {
+    width: 36px;
+  }
+}
+
+/* SMALL MOBILE (≤576px) */
+@media (max-width: 576px) {
+  .conclusion .usecases .usecase-item {
+    flex-direction: column;
+    text-align: left;
   }
 }
