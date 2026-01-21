@@ -150,10 +150,18 @@ document.addEventListener("DOMContentLoaded", function () {
     a.textContent = link.text;
     a.href = fixEmptyLink(link.href);
 
-    // ===== ACTIVE LINK LOGIC =====
-    const linkPath = a.getAttribute("href").replace(window.location.origin, "");
-    if (linkPath !== "#" && !linkPath.startsWith("tel:") && !linkPath.startsWith("mailto:")) {
-      if (window.location.pathname === linkPath) {
+    // ===== ACTIVE LINK LOGIC (works with clean URLs) =====
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
+    const linkHref = a.getAttribute("href").replace(/\/$/, "");      // remove trailing slash
+
+    // Ignore tel/mailto links
+    if (!linkHref.startsWith("tel:") && !linkHref.startsWith("mailto:")) {
+
+      // Map .html links to clean URLs
+      const cleanLink = linkHref.replace(/\.html$/, "");
+
+      // Compare
+      if (currentPath === cleanLink || (linkHref === "/" && currentPath === "")) {
         a.classList.add("active");
       }
     }
