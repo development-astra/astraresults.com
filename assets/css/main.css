@@ -5273,3 +5273,288 @@ section,
     text-align: left;
   }
 }
+
+/* ==========================================================
+   RETARGETING DETAILS – BASE
+========================================================== */
+.retargeting-details {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.retargeting-details .container-fluid {
+  padding-inline: 60px;
+}
+
+.retargeting-details .icon svg {
+  width: 30px;
+}
+
+.retargeting-details ul.list-unstyled {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.retargeting-details .card {
+  width: 50%;
+  background-image: linear-gradient(to bottom, #FFFFFF, #ffbb0117);
+  border-radius: 24px;
+  border-top: 5px solid #818090;
+  border-right: 5px solid #818090;
+}
+
+.retargeting-details .card .card-body {
+  padding: 25px;
+}
+
+.retargeting-details .card .card-body .card-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: 30px;
+}
+
+/* ----------------------------------------------------------
+   TYPOGRAPHY
+---------------------------------------------------------- */
+.retargeting-details h2 {
+  font-family: "integral-cf", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: #0b0d2b;
+  margin-bottom: 24px;
+}
+
+.retargeting-details .section-intro {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+/* ----------------------------------------------------------
+   FEATURES LIST
+---------------------------------------------------------- */
+.retargeting-details .features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 36px;
+}
+
+.retargeting-details .features-list li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.retargeting-details .features-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #ffbc01;
+  font-size: 20px;
+}
+
+/* ----------------------------------------------------------
+   CTA BUTTON
+---------------------------------------------------------- */
+.retargeting-details .cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 26px;
+  background-color: #ffbc01;
+  color: #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.retargeting-details .cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 188, 1, 0.35);
+}
+
+.retargeting-details .cta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0d2b;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ==========================================================
+   RIGHT COLUMN (CARDS & IMAGES)
+========================================================== */
+.retargeting-cards {
+  position: relative;
+  min-height: 520px;
+}
+
+/* ----------------------------------------------------------
+   RETARGET CARDS
+---------------------------------------------------------- */
+.retarget-card {
+  position: absolute;
+  max-width: 380px;
+  background-color: #fffaf0;
+  padding: 28px 30px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.retarget-card .card-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0a0f2c;
+  margin-bottom: 14px;
+}
+
+.retarget-card p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #2d2d2d;
+}
+
+/* Example placements (adjust if needed) */
+.retarget-card.card-top {
+  top: 0;
+  right: 0;
+}
+
+.retarget-card.card-bottom {
+  bottom: 0;
+  left: 0;
+}
+
+/* ----------------------------------------------------------
+   IMAGE STACK
+---------------------------------------------------------- */
+.retargeting-details .image-stack {
+  position: relative;
+  max-width: 520px;
+  margin-left: auto;
+}
+
+.retargeting-details .main-img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.retargeting-details .small-img {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  border-radius: 20px;
+}
+
+/* ----------------------------------------------------------
+   STATS CARD
+---------------------------------------------------------- */
+.retargeting-details .stats-card {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  padding: 24px 28px;
+  background-color: #0b0d2b;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.retargeting-details .stats-card .label {
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.retargeting-details .stats-card .value {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+/* ==========================================================
+   BREAKPOINTS
+========================================================== */
+
+/* ---------------- DESKTOP ≥1200px ---------------- */
+@media (min-width: 1200px) {
+  .retargeting-details h2 {
+    font-size: 52px;
+  }
+}
+
+/* ---------------- LAPTOP ≤1199px ---------------- */
+@media (max-width: 1199px) {
+  .retargeting-details .container-fluid {
+    padding-inline: 40px;
+  }
+
+  .retargeting-details h2 {
+    font-size: 44px;
+  }
+}
+
+/* ---------------- TABLET ≤991px ---------------- */
+@media (max-width: 991px) {
+  .retargeting-details {
+    padding: 60px 0;
+  }
+
+  .retargeting-details .content-left,
+  .retargeting-details .content-right {
+    text-align: center;
+  }
+
+  .retargeting-details .features-list li {
+    text-align: left;
+  }
+
+  .retargeting-cards {
+    min-height: auto;
+  }
+
+  .retarget-card {
+    position: static;
+    margin: 24px auto;
+  }
+
+  .retargeting-details .image-stack {
+    margin: 40px auto 0;
+  }
+}
+
+/* ---------------- MOBILE ≤575px ---------------- */
+@media (max-width: 575px) {
+  .retargeting-details .container-fluid {
+    padding-inline: 20px;
+  }
+
+  .retargeting-details h2 {
+    font-size: 32px;
+  }
+
+  .retargeting-details .cta-btn {
+    width: 100%;
+  }
+
+  .retargeting-details .small-img {
+    display: none;
+  }
+
+  .retargeting-details .stats-card {
+    position: static;
+    margin-top: 20px;
+  }
+}
