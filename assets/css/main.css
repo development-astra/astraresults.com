@@ -5558,3 +5558,142 @@ section,
     margin-top: 20px;
   }
 }
+
+/* ----------------------------------------------------------
+  RETARGETING SECTION
+---------------------------------------------------------- */
+.retargeting-section {
+  padding: 20px;
+  background: #f9fbfd;
+  position: relative;
+}
+
+.retargeting-section .container-fluid {
+  background-image: url("/assets/img/bg/retargeting-section.webp");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding: 70px 100px;
+  border-radius: 24px;
+}
+
+.retargeting-section .retargeting-title {
+  font-family: "integral-cf", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  letter-spacing: 1px;
+  color: #000326;
+}
+
+.retargeting-section .retargeting-desc {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #000326;
+  width: 80%;
+  line-height: 1.7;
+}
+
+.retargeting-section .star-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.retargeting-section .star-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.retargeting-section .retargeting-list li {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  color: #000326;
+}
+
+.retargeting-section .info-card {
+  background: linear-gradient(135deg, #0b0f2a, #141b45);
+  color: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.retargeting-section .info-card h5 {
+  font-family: "integral-cf", sans-serif;
+  color: #ffffff;
+  width: 50%;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.retargeting-section .info-card p {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* DESKTOP (≥1400px) */
+@media (min-width: 1400px) {
+  .retargeting-section .container-fluid {
+    background-position: right center;
+  }
+  .retargeting-section .retargeting-title { font-size: 42px; }
+  .retargeting-section .retargeting-desc { font-size: 18px; }
+}
+
+/* LAPTOP (992px–1399px) */
+@media (max-width: 1399px) and (min-width: 992px) {
+  .retargeting-section .container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .retargeting-section .retargeting-title { font-size: 36px; }
+  .retargeting-section .retargeting-desc { font-size: 16px; }
+}
+
+/* TABLET (768px–991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .retargeting-section .container-fluid {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-position: 70% center; /* shifts artwork so text stays readable */
+  }
+  .retargeting-section {
+    padding: 60px 0;
+  }
+
+  .retargeting-section .retargeting-title {
+    font-size: 30px;
+  }
+
+  .retargeting-section .info-card {
+    padding: 22px;
+  }
+}
+
+/* MOBILE (<768px) */
+@media (max-width: 767px) {
+  .retargeting-section {
+    padding: 50px 15px;
+  }
+
+  .retargeting-section .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .retargeting-section .retargeting-title {
+    font-size: 24px;
+  }
+
+  .retargeting-section .retargeting-desc {
+    font-size: 14px;
+  }
+}
