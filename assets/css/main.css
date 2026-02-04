@@ -5697,3 +5697,79 @@ section,
     font-size: 14px;
   }
 }
+
+/* ----------------------------------------------------------
+  CALL TO ACTION TWO SECTION
+---------------------------------------------------------- */
+/* Base */
+.cta-two {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+
+  background-image: url("/assets/img/general/services-bg.webp");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.cta-two-title {
+  font-family: "integral-cf", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.cta-two-text {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 1.125rem;
+  color: #e5e5e5;
+  line-height: 1.7;
+}
+
+.cta-two-btn {
+  background: #ffb800;
+  color: #0b0f2a;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.cta-two-btn:hover {
+  transform: translateY(-2px);
+  background: #e6a500;
+}
+
+/* Desktop */
+@media (min-width: 1400px) {
+  .cta-two-title { font-size: 3rem; }
+  .cta-two-text { font-size: 1.2rem; }
+}
+
+/* Laptop */
+@media (min-width: 992px) and (max-width: 1399px) {
+  .cta-two-title { font-size: 2.75rem; }
+  .cta-two-text { font-size: 1.15rem; }
+}
+
+/* Tablet */
+@media (max-width: 991px) and (min-width: 768px) {
+  .cta-two-title { font-size: 2.5rem; }
+  .cta-two-text { font-size: 1.1rem; }
+  .cta-two-btn { padding: 14px 30px; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .cta-two {
+    background-position: center right;
+    padding: 3rem 1rem;
+  }
+  .cta-two-title { font-size: 2rem; }
+  .cta-two-text { font-size: 1rem; }
+  .cta-two-btn {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
