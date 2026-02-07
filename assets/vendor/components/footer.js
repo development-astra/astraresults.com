@@ -23,17 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     quickLinks: [
       { text: "Home", href: "/" },
-      { text: "About Us", href: "#" },
-      { text: "Pay-Per-Click Advertising", href: "#" },
-      { text: "Search Engine Optimization", href: "#" },
-      { text: "E-Commerce", href: "#" },
-      { text: "Video Production & Creative Marketing", href: "#" },
-      { text: "Social Media Marketing", href: "#" },
-      { text: "Business Consulting", href: "#" },
-      { text: "AI Sales CSR", href: "#" },
-      { text: "AI Sales Outbound Appointment Setting", href: "#" },
-      { text: "AI Sales Inbound Appointment Setting", href: "#" },
-      { text: "Custom UI/UX web design and development", href: "#" },
+      { text: "About Us", href: "/about-us.html" },
+      { text: "Pay-Per-Click Advertising", href: "/our-services/pay-per-click-advertising.html" },
+      { text: "Search Engine Optimization", href: "/our-services/search-engine-optimization.html" },
+      { text: "E-Commerce", href: "/our-services/ecommerce-marketing.html" },
+      { text: "Video Production & Creative Marketing", href: "/our-services/video-production-and-creative-marketing.html" },
+      { text: "Social Media Marketing", href: "/our-services/engaging-social-media-marketing.html" },
+      { text: "Business Consulting", href: "/our-services/business-consulting.html" },
+      { text: "AI Sales CSR", href: "/our-services/ai-inbound-sales.html" },
+      { text: "AI Sales Outbound Appointment Setting", href: "/our-services/ai-outbound-sales.html" },
+      { text: "AI Sales Inbound Appointment Setting", href: "/our-services/ai-inbound-sales" },
+      { text: "Custom UI/UX web design and development", href: "/our-services/ui-ux-development-and-design.html" },
     ],
 
     contacts: {

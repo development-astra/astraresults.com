@@ -123,7 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks: [
       { text: "Home", href: "/" },
       { text: "Services", href: "/services.html" },
+      { text: "AI Services", href: "" },
+      { text: "Business Consulting", href: "" },
       { text: "About Us", href: "/about-us.html" },
+      { text: "Blog", href: "/blogs.html" },
       { text: "Contact Us", href: "tel:+17866433036", },
     ],
 
