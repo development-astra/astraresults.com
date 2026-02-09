@@ -499,25 +499,138 @@ h6 {
   color: transparent;
 }
 
-/* Offcanvas
-------------------------------*/
-.offcanvas {
+/*--------------------------------------------------------------
+# Offcanvas Version I
+--------------------------------------------------------------*/
+/* .offcanvas {
   background-image: url("/assets/img/general/offcanvas-bg.webp");
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
-  /* background: rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(14px);
+  border-right: 1px solid rgba(255, 255, 255, 0.35)!important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #fff;
+} */
+
+/* Header & body text */
+/* .offcanvas .offcanvas-header,
+.offcanvas .offcanvas-body {
+  color: #fff;
+} */
+
+/* Title */
+/* .offcanvas .offcanvas-header .offcanvas-title {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.offcanvas .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  max-height: 10%;
+}
+
+.offcanvas .offcanvas-header .offcanvas-title span.logo a {
+  width: 70%;
+}
+
+.offcanvas .offcanvas-body .call-to-action .card {
+  background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px); */
+  -webkit-backdrop-filter: blur(14px);
+  border-right: 1px solid rgba(255, 255, 255, 0.35)!important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.offcanvas .offcanvas-body .call-to-action p {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.offcanvas .offcanvas-body .call-to-action a {
+  padding: 10px;
+  background: linear-gradient(90deg, #FFBC01, #FFE59E);
+  border: 2px solid #FFBC01;
+  border-radius: 15px;
+  font-family: "Mona Sans", sans-serif;
+  font-weight: 700;
+  color: #000326;
+  letter-spacing: 1px;
+}
+
+.offcanvas .offcanvas-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+} */
+
+/* Close button glass */
+/* .offcanvas .btn-close {
+  filter: brightness(0) invert(1);
+  transition: all 0.25s ease;
+}
+
+.offcanvas .btn-close:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+} */
+
+/* Dropdown button glass */
+/* .offcanvas .btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.offcanvas .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.35);
+} */
+
+/* Dropdown menu glass */
+/* .offcanvas .dropdown-menu {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.offcanvas .dropdown-item {
+  color: #fff;
+}
+
+.offcanvas .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.offcanvas .footer-copy {
+  font-size: 12px;
+} */
+
+/*--------------------------------------------------------------
+# Offcanvas Version II
+--------------------------------------------------------------*/
+.offcanvas {
+  background-image: url("/assets/img/bg/offcanvas-bg-2.webp");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   border-right: 1px solid rgba(255, 255, 255, 0.35)!important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   color: #fff;
 }
 
 /* Header & body text */
+.offcanvas .offcanvas-header svg {
+  width: 150px;
+}
+
 .offcanvas .offcanvas-header,
 .offcanvas .offcanvas-body {
-  color: #fff;
+  color: #000000;
 }
 
 /* Title */
@@ -566,10 +679,10 @@ h6 {
 }
 
 /* Close button glass */
-.offcanvas .btn-close {
+/* .offcanvas .btn-close {
   filter: brightness(0) invert(1);
   transition: all 0.25s ease;
-}
+} */
 
 .offcanvas .btn-close:hover {
   background: rgba(255, 255, 255, 0.35);
@@ -596,7 +709,7 @@ h6 {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
+  color: #ffffff;
 }
 
 .offcanvas .dropdown-item {
@@ -1195,15 +1308,18 @@ h6 {
   }
 
   .mobile-nav .nav-link {
-    color: #fff;
-    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    color: #000326;
+    font-weight: 400;
     font-size: 18px;
-    padding: 12px 16px;
+    text-transform: uppercase;
+    padding: 12px 0 12px 0;
     border-radius: 0;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     transition: all 0.25s ease;
   }
 
@@ -1213,8 +1329,25 @@ h6 {
   }
 
   .mobile-nav .nav-link.active {
-    background: linear-gradient(90deg, #FFBC01, #FFE59E);
+    /* background: linear-gradient(90deg, #FFBC01, #FFE59E); */
     color: #000;
+    font-weight: 600;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #FFBC01, #FFE59E);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
   }
 }
 
