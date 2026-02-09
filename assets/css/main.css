@@ -1150,7 +1150,7 @@ h6 {
     bottom: -6px;
     width: 0;
     height: 2px;
-    background-color: var(--nav-hover-color);
+    /* background-color: var(--nav-hover-color); */
     transform: translateX(-50%);
     transition: width 0.3s ease;
   }
@@ -1205,8 +1205,10 @@ h6 {
   }
 
   .navmenu .dropdown .dropdown ul {
+    display: flex;
+    flex-direction: column;
     top: 0;
-    left: -90%;
+    left: 90%!important;
     visibility: hidden;
   }
 
@@ -1214,6 +1216,10 @@ h6 {
     opacity: 1;
     left: -100%;
     visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown-menu li {
+    text-transform: uppercase;
   }
 }
 

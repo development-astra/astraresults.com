@@ -92,12 +92,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navLinks: [
       { text: "Home", href: "/" },
-      { text: "Services", href: "/services.html" },
-      { text: "AI Services", href: "" },
-      { text: "Business Consulting", href: "" },
+      {
+        text: "Services",
+        subLinks: [
+          {
+            text: "Marketing Services",
+            href: "",
+            subLinks: [
+              { text: "Business Consulting", href: "/our-services/business-consulting.html" },
+              { text: "Creative Marketing", href: "/our-services/video-production-and-creative-marketing.html" },
+              { text: "E-Commerce Marketing", href: "/our-services/ecommerce-marketing.html" },
+              { text: "PPC Advertising", href: "/our-services/pay-per-click-advertising.html" },
+              { text: "SEO", href: "/our-services/search-engine-optimization.html" },
+              { text: "Social Media Marketing", href: "/our-services/engaging-social-media-marketing.html" },
+              { text: "UI/UX Web Design", href: "/our-services/ui-ux-development-and-design.html" },
+              { text: "Video Production", href: "/our-services/video-production-and-creative-marketing.html" },
+            ],
+          },
+          {
+            text: "AI Services",
+            href: "",
+            subLinks: [
+              { text: "AI Inbound Intake", href: "/our-services/ai-inbound-sales.html" },
+              { text: "AI Outbound Sales", href: "/our-services/ai-outbound-sales.html" },
+              { text: "ChatGPT AI", href: "/our-services/chat-gpt-ai.html" },
+            ],
+          },
+        ],
+      },
       { text: "About Us", href: "/about-us.html" },
       { text: "Blog", href: "/blogs.html" },
-      { text: "Contact Us", href: "tel:+17866433036", },
+      { text: "Contact Us", href: "tel:+17866433036" },
     ],
 
     cta: {
@@ -120,45 +145,63 @@ document.addEventListener("DOMContentLoaded", function () {
   function createNavItem(link) {
     const li = document.createElement("li");
     const a = document.createElement("a");
+
     a.textContent = link.text;
     a.href = fixEmptyLink(link.href);
 
-    // ===== ACTIVE LINK LOGIC (works with clean URLs) =====
-    const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
-    const linkHref = a.getAttribute("href").replace(/\/$/, "");      // remove trailing slash
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+    const linkHref = a.getAttribute("href").replace(/\/$/, "");
 
-    // Ignore tel/mailto links
+    let isActive = false;
+
+    // Ignore tel/mailto
     if (!linkHref.startsWith("tel:") && !linkHref.startsWith("mailto:")) {
-
-      // Map .html links to clean URLs
       const cleanLink = linkHref.replace(/\.html$/, "");
-
-      // Compare
       if (currentPath === cleanLink || (linkHref === "/" && currentPath === "")) {
+        isActive = true;
         a.classList.add("active");
       }
     }
 
     li.appendChild(a);
 
-    // Handle subLinks (dropdowns)
+    // ===== DROPDOWN SUPPORT =====
     if (link.subLinks && link.subLinks.length > 0) {
       li.classList.add("dropdown");
+
+      // Make parent link non-navigable
+      a.href = "javascript:void(0)"; // Prevent navigation
 
       const ul = document.createElement("ul");
       ul.classList.add("dropdown-menu");
 
       link.subLinks.forEach(sub => {
-        const subLi = createNavItem(sub); // recursive call
+        const subLi = createNavItem(sub);
+
+        // If a child is active, parent becomes active
+        if (subLi.querySelector("a.active")) {
+          isActive = true;
+        }
+
         ul.appendChild(subLi);
       });
 
+      if (isActive) {
+        a.classList.add("active");
+        li.classList.add("active");
+      }
+
       li.appendChild(ul);
 
-      // Mobile toggle (click)
+      // Mobile click toggle
       a.addEventListener("click", (e) => {
         if (window.innerWidth < 992) {
-          e.preventDefault();
+          e.preventDefault(); // stop navigation
+
+          // Toggle parent li
+          li.classList.toggle("show");
+
+          // Toggle submenu
           ul.classList.toggle("show");
         }
       });
