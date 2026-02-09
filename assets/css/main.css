@@ -5912,3 +5912,169 @@ section,
     font-size: 1.1rem;
   }
 }
+
+/* ----------------------------------------------------------
+  Contact Us
+---------------------------------------------------------- */
+.contact-us {
+  background: #f5f5f5;
+}
+
+.contact-us .icon-box {
+  width: 45px;
+  height: 45px;
+  background: #ffc107;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #000;
+}
+
+.contact-us .contact-item h6 {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 28px;
+  color: #000326;
+}
+
+.contact-us .contact-link {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000326;
+}
+
+.contact-us .social-icons a {
+  font-size: 20px;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.contact-us .social-icons a:hover {
+  opacity: 0.6;
+}
+
+.contact-us .contact-card {
+  background: #070c2c;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.contact-us .contact-title {
+  font-family: "integral-cf", sans-serif;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.contact-us .contact-subtitle {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.contact-us .custom-input {
+  background: #10163a;
+  border: none;
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.contact-us .custom-input::placeholder {
+  color: #aaa;
+}
+
+.contact-us .custom-input:focus {
+  box-shadow: none;
+  background: #141a44;
+  color: #fff;
+}
+
+.contact-us .form-check-label {
+  font-size: 14px;
+}
+
+.contact-us .submit-btn {
+  background: #ffc107;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+}
+
+.contact-us .submit-btn:hover {
+  background: #e0a800;
+}
+
+/* Checkbox default border */
+.contact-us .form-check-input {
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+/* When checked */
+.contact-us .form-check-input:checked {
+  background-color: #FFC107;
+  border-color: #FFC107;
+}
+
+/* Optional: Remove blue focus glow */
+.contact-us .form-check-input:focus {
+  box-shadow: none;
+  border-color: #FFC107;
+}
+
+/* Optional: Slight hover effect */
+.contact-us .form-check-input:hover {
+  border-color: #FFC107;
+}
+
+/* LAPTOP (1200px - 1399px) */
+@media (max-width: 1399px) {
+  .contact-us .contact-title {
+    font-size: 28px;
+  }
+}
+
+
+/* TABLET (768px - 1199px) */
+@media (max-width: 1199px) {
+  .contact-us .contact-card {
+    padding: 40px;
+  }
+
+  .contact-us .contact-title {
+    font-size: 24px;
+  }
+}
+
+
+/* MOBILE (Below 768px) */
+@media (max-width: 767px) {
+
+  .contact-us .contact-card {
+    padding: 25px;
+  }
+
+  .contact-us .contact-title {
+    font-size: 20px;
+  }
+
+  .contact-us .social-icons {
+    margin-top: 40px;
+  }
+
+  .contact-us .icon-box {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .contact-us .submit-btn {
+    width: 100%;
+  }
+}
