@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       { text: "About Us", href: "/about-us.html" },
       { text: "Blog", href: "/blogs.html" },
-      { text: "Contact Us", href: "/contact-html" },
+      { text: "Contact Us", href: "/contact.html" },
     ],
 
     cta: {
