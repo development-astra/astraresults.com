@@ -92,34 +92,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navLinks: [
       { text: "Home", href: "/" },
-      {
-        text: "Services",
-        subLinks: [
-          {
-            text: "Marketing Services",
-            href: "",
-            subLinks: [
-              { text: "Business Consulting", href: "/our-services/business-consulting.html" },
-              { text: "Creative Marketing", href: "/our-services/video-production-and-creative-marketing.html" },
-              { text: "E-Commerce Marketing", href: "/our-services/ecommerce-marketing.html" },
-              { text: "PPC Advertising", href: "/our-services/pay-per-click-advertising.html" },
-              { text: "SEO", href: "/our-services/search-engine-optimization.html" },
-              { text: "Social Media Marketing", href: "/our-services/engaging-social-media-marketing.html" },
-              { text: "UI/UX Web Design", href: "/our-services/ui-ux-development-and-design.html" },
-              { text: "Video Production", href: "/our-services/video-production-and-creative-marketing.html" },
-            ],
-          },
-          {
-            text: "AI Services",
-            href: "",
-            subLinks: [
-              { text: "AI Inbound Intake", href: "/our-services/ai-inbound-sales.html" },
-              { text: "AI Outbound Sales", href: "/our-services/ai-outbound-sales.html" },
-              { text: "ChatGPT AI", href: "/our-services/chat-gpt-ai.html" },
-            ],
-          },
-        ],
-      },
+      { text: "Services", triggerMega: true },
+      // {
+      //   text: "Services",
+      //   subLinks: [
+      //     {
+      //       text: "Marketing Services",
+      //       href: "",
+      //       subLinks: [
+      //         { text: "Business Consulting", href: "/our-services/business-consulting.html" },
+      //         { text: "Creative Marketing", href: "/our-services/video-production-and-creative-marketing.html" },
+      //         { text: "E-Commerce Marketing", href: "/our-services/ecommerce-marketing.html" },
+      //         { text: "PPC Advertising", href: "/our-services/pay-per-click-advertising.html" },
+      //         { text: "SEO", href: "/our-services/search-engine-optimization.html" },
+      //         { text: "Social Media Marketing", href: "/our-services/engaging-social-media-marketing.html" },
+      //         { text: "UI/UX Web Design", href: "/our-services/ui-ux-development-and-design.html" },
+      //         { text: "Video Production", href: "/our-services/video-production-and-creative-marketing.html" },
+      //       ],
+      //     },
+      //     {
+      //       text: "AI Services",
+      //       href: "",
+      //       subLinks: [
+      //         { text: "AI Inbound Intake", href: "/our-services/ai-inbound-sales.html" },
+      //         { text: "AI Outbound Sales", href: "/our-services/ai-outbound-sales.html" },
+      //         { text: "ChatGPT AI", href: "/our-services/chat-gpt-ai.html" },
+      //       ],
+      //     },
+      //   ],
+      // },
       { text: "About Us", href: "/about-us.html" },
       { text: "Blog", href: "/blogs.html" },
       { text: "Contact Us", href: "/contact.html" },
@@ -147,74 +148,40 @@ document.addEventListener("DOMContentLoaded", function () {
     const a = document.createElement("a");
 
     a.textContent = link.text;
-    a.href = fixEmptyLink(link.href);
+    a.classList.add("nav-link");
 
-    const currentPath = window.location.pathname.replace(/\/$/, "");
-    const linkHref = a.getAttribute("href").replace(/\/$/, "");
+    // ===== SERVICES → OPEN CUSTOM MEGA MENU =====
+    if (link.triggerMega) {
+      a.href = "javascript:void(0)";
+      a.setAttribute("role", "button");
 
-    let isActive = false;
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-    // Ignore tel/mailto
-    if (!linkHref.startsWith("tel:") && !linkHref.startsWith("mailto:")) {
-      const cleanLink = linkHref.replace(/\.html$/, "");
-      if (currentPath === cleanLink || (linkHref === "/" && currentPath === "")) {
-        isActive = true;
-        a.classList.add("active");
+        console.log("Services clicked");
+
+        // OPEN CUSTOM MEGA MENU
+        if (typeof window.openMegaMenu === "function") {
+          window.openMegaMenu();
+        }
+      });
+
+    } else {
+      a.href = link.href || "#";
+
+      const currentPath = window.location.pathname.replace(/\/$/, "");
+      const linkHref = a.getAttribute("href").replace(/\/$/, "");
+
+      if (!linkHref.startsWith("tel:") && !linkHref.startsWith("mailto:")) {
+        const cleanLink = linkHref.replace(/\.html$/, "");
+        if (currentPath === cleanLink || (linkHref === "/" && currentPath === "")) {
+          a.classList.add("active");
+        }
       }
     }
 
     li.appendChild(a);
-
-    // ===== DROPDOWN SUPPORT =====
-    if (link.subLinks && link.subLinks.length > 0) {
-      li.classList.add("dropdown");
-
-      // Make parent link non-navigable
-      a.href = "javascript:void(0)"; // Prevent navigation
-
-      const ul = document.createElement("ul");
-      ul.classList.add("dropdown-menu");
-
-      link.subLinks.forEach(sub => {
-        const subLi = createNavItem(sub);
-
-        // If a child is active, parent becomes active
-        if (subLi.querySelector("a.active")) {
-          isActive = true;
-        }
-
-        ul.appendChild(subLi);
-      });
-
-      if (isActive) {
-        a.classList.add("active");
-        li.classList.add("active");
-      }
-
-      li.appendChild(ul);
-
-      // Mobile click toggle
-      a.addEventListener("click", (e) => {
-        if (window.innerWidth < 992) {
-          e.preventDefault(); // stop navigation
-
-          // Toggle parent li
-          li.classList.toggle("show");
-
-          // Toggle submenu
-          ul.classList.toggle("show");
-        }
-      });
-
-      // Desktop hover
-      li.addEventListener("mouseenter", () => {
-        if (window.innerWidth >= 992) ul.classList.add("show");
-      });
-      li.addEventListener("mouseleave", () => {
-        if (window.innerWidth >= 992) ul.classList.remove("show");
-      });
-    }
-
     return li;
   }
 

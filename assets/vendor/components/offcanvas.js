@@ -1,9 +1,3 @@
-/**
- * Website Name: Astra Results, Inc.
- * Author: carvelruss.com
- * Description: Handles offcanvas menu population, mobile logo, and dynamic footer year.
- */
-
 document.addEventListener("DOMContentLoaded", function () {
 
   // ===== HELPER: fix empty links =====
@@ -34,12 +28,36 @@ document.addEventListener("DOMContentLoaded", function () {
         const a = document.createElement("a");
         a.classList.add("nav-link");
         a.textContent = link.text;
-        a.href = fixEmptyLink(link.href);
 
-        // Active link detection
-        const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
-        const linkPath = a.getAttribute("href").replace(window.location.origin, "").replace(/\/$/, "");
-        if (linkPath === currentPath) a.classList.add("active");
+        if (link.triggerMega) {
+          // Mega menu trigger for mobile
+          a.href = "javascript:void(0)";
+          a.setAttribute("role", "button");
+
+          a.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Open mega menu
+            if (typeof window.openMegaMenu === "function") {
+              window.openMegaMenu();
+            }
+
+            // Close offcanvas if open
+            const offcanvas = document.getElementById("offcanvasRight");
+            if (offcanvas && offcanvas.classList.contains("show")) {
+              offcanvas.classList.remove("show");
+              document.body.classList.remove("offcanvas-open");
+            }
+          });
+        } else {
+          a.href = fixEmptyLink(link.href);
+
+          // Active link detection
+          const currentPath = window.location.pathname.replace(/\/$/, "");
+          const linkPath = a.getAttribute("href").replace(window.location.origin, "").replace(/\/$/, "");
+          if (linkPath === currentPath) a.classList.add("active");
+        }
 
         li.appendChild(a);
         mobileNav.appendChild(li);
@@ -49,12 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // FOOTER YEAR
     const footerYears = document.querySelectorAll("#footerYear");
     footerYears.forEach(el => {
-    el.textContent = new Date().getFullYear();
+      el.textContent = new Date().getFullYear();
     });
   }
 
   // ===== MAIN EXECUTION =====
-  // Use global window.headerData from header.js
   if (typeof window.headerData !== "undefined") {
     populateOffcanvas(window.headerData);
   } else {

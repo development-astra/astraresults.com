@@ -6078,3 +6078,158 @@ section,
     width: 100%;
   }
 }
+
+/* ----------------------------------------------------------
+# Mega Menu
+---------------------------------------------------------- */
+:root {
+  --mega-bg: #ffffff;
+  --mega-overlay: rgba(0, 0, 0, 0.45);
+  --mega-radius: 16px;
+  --mega-padding-desktop: 30px;
+  --mega-padding-laptop: 40px;
+  --mega-padding-tablet: 30px;
+  --mega-padding-mobile: 20px;
+  --mega-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --mega-z: 1050;
+}
+
+#mega-menu {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  padding: 0 70px !important;
+  background-color: none;
+
+  pointer-events: none;
+  opacity: 0;
+  z-index: var(--mega-z);
+
+  transition: opacity var(--mega-transition);
+}
+
+/* Optional Overlay */
+#mega-menu .mega-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  transition: opacity var(--mega-transition);
+}
+
+/* Panel */
+#mega-menu .mega-panel {
+  position: relative;
+  background: var(--mega-bg);
+  padding: var(--mega-padding-desktop);
+  border-radius: var(--mega-radius);
+
+  transform: translateY(-40px);
+  opacity: 0;
+
+  transition: 
+    transform var(--mega-transition),
+    opacity var(--mega-transition);
+
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Active State */
+#mega-menu.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#mega-menu.active .mega-panel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#mega-menu .menu-list .menu-item {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 18px;
+}
+
+#mega-menu .menu-list .menu-item::before {
+  content: "";
+  width: 8px;
+  height: 2px;
+  background: #ffc107;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+/* Close Button */
+#mega-menu .mega-close {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  font-size: 1.8rem;
+  width: 50px;
+  height: 40px;
+  background: #FFE59E;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#mega-menu .mega-panel .promo-card a svg {
+  margin-right: 50px!important;
+  width: 100%;
+}
+
+/* LAPTOP (≤ 1399px) */
+@media (max-width: 1399px) {
+
+  #mega-menu {
+    padding: 0 50px !important;
+  }
+
+  #mega-menu .mega-panel {
+    padding: var(--mega-padding-laptop);
+  }
+
+}
+
+/* TABLET (≤ 991px) */
+@media (max-width: 991px) {
+
+  #mega-menu {
+    top: 100px;
+    height: calc(100vh - 100px);
+    padding: 0 30px !important;
+  }
+
+  #mega-menu .mega-panel {
+    padding: var(--mega-padding-tablet);
+    border-radius: 12px;
+  }
+
+}
+
+/* MOBILE (≤ 576px) */
+@media (max-width: 576px) {
+
+  #mega-menu {
+    top: 80px;
+    height: calc(95vh - 80px);
+    padding: 0 15px !important;
+  }
+
+  #mega-menu .mega-panel {
+    padding: var(--mega-padding-mobile);
+    border-radius: 10px;
+  }
+
+  #mega-menu .mega-close {
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+  }
+
+}
