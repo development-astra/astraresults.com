@@ -405,7 +405,7 @@ h6 {
 /* Modal: Newsletter
 ------------------------------*/
 .modal {
-  background-image: url("/assets/img/general/compressed/services-bg.webp");
+  background-image: url("/assets/img/general/services-bg.webp");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -614,7 +614,7 @@ h6 {
 # Offcanvas Version II
 --------------------------------------------------------------*/
 .offcanvas {
-  background-image: url("/assets/img/bg/compressed/offcanvas-bg-2.webp");
+  background-image: url("/assets/img/bg/offcanvas-bg-2.webp");
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -1679,7 +1679,7 @@ section,
   inset: 0;
   z-index: 1;
 
-  background-image: url("/assets/img/bg/compressed/hero-bg.webp");
+  background-image: url("/assets/img/bg/hero-bg.webp");
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -2386,7 +2386,7 @@ section,
   position: relative;
   margin-top: -120px;
   padding: 160px 0 100px;
-  background: url("/assets/img/general/compressed/why-us-bg.webp") top center / cover no-repeat;
+  background: url("/assets/img/general/why-us-bg.webp") top center / cover no-repeat;
   color: #ffffff;
   z-index: -1;
 }
@@ -2616,7 +2616,7 @@ section,
 --------------------------------------------------------------*/
 .services {
   padding: 0;
-  background-image: url("/assets/img/general/compressed/services-bg.webp");
+  background-image: url("/assets/img/general/services-bg.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -2994,7 +2994,7 @@ section,
 --------------------------------------------------------------*/
 .stellar-results {
   padding: 0;
-  background-image: url("/assets/img/general/compressed/stellar-results-bg.webp");
+  background-image: url("/assets/img/general/stellar-results-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3514,7 +3514,7 @@ section,
       rgba(4, 6, 47, 0.95) 35%,
       rgba(2, 3, 33, 1) 70%),
     url("/assets/img/backgrounds/stellar-bg.webp"); */
-  background-image: url("/assets/img/general/compressed/services-bg.webp");
+  background-image: url("/assets/img/general/services-bg.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -3602,7 +3602,7 @@ section,
   min-height: 520px;
   padding: 150px 0 20px;
   color: #ffffff;
-  background-image: url("/assets/img/bg/compressed/inner-hero-bg.webp");
+  background-image: url("/assets/img/bg/inner-hero-bg.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -4292,7 +4292,7 @@ section,
   padding-top: 40px;
   padding-bottom: 40px;
   border-radius: 32px;
-  background-image: url("/assets/img/bg/compressed/brand-positioning-bg-2.webp");
+  background-image: url("/assets/img/bg/brand-positioning-bg-2.webp");
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -4903,7 +4903,7 @@ section,
   padding-top: 40px;
   padding-bottom: 40px;
   border-radius: 32px;
-  background-image: url("/assets/img/general/compressed/services-bg.webp");
+  background-image: url("/assets/img/general/services-bg.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -5846,7 +5846,7 @@ section,
   overflow: hidden;
   color: #fff;
 
-  background-image: url("/assets/img/general/compressed/services-bg.webp");
+  background-image: url("/assets/img/general/services-bg.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
