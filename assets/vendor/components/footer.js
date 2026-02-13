@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Astra Headquarters",
       address: "1101 Brickell Ave,\nMiami, FL 33131",
       phone: "+1 786-643-3036",
-      email: "info@astraresults.com"
+      email: "sales@astraresults.com"
     },
 
     legal: [
