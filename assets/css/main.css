@@ -6233,3 +6233,145 @@ section,
   }
 
 }
+
+/*--------------------------------------------------------------
+# Top Picks Section
+--------------------------------------------------------------*/
+.top-picks {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.top-picks .section-heading {
+  font-family: "Mona Sans", sans-serif; /* Matches image style */
+  font-weight: 500;
+  font-size: 32px;
+  color: #000326;
+  margin-bottom: 20px;
+}
+
+
+/* --- Filter Buttons (The Grey Pill Container) --- */
+.top-picks .filter-buttons {
+  background-color: #f2f2f2; /* The gray background track */
+  padding: 6px;
+  border-radius: 15px;       /* Pill shape */
+  display: inline-flex;      /* Essential: Makes div shrink to fit buttons */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;                  /* Gap handled here, remove gap-2 from HTML if you want precise control */
+}
+
+/* Filter Buttons */
+.top-picks .btn-filter {
+  background-color: #ffffff; /* White inactive buttons */
+  color: #555;
+  border: none;
+  padding: 15px 28px;
+  font-family: "Mona Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.top-picks .btn-filter:hover {
+  background-color: #e0e0e0;
+}
+
+.top-picks .btn-filter.active {
+  background-color: #0a0f2c;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(10, 15, 44, 0.2);
+}
+
+/* Blog Cards */
+.top-picks .blog-card {
+  background: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+.top-picks .card-img-holder {
+  background-color: #eeeeee; /* Placeholder grey background */
+  width: 100%;
+  height: 240px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Simulates the mountain icon in the placeholder if image is missing */
+.top-picks .card-img-holder::after {
+  content: ""; 
+  /* You can add a background-image of an icon here if you want */
+  display: block;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+}
+
+.top-picks .card-img-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  /* Hide actual image if you want to see the grey placeholder box purely via CSS */
+  opacity: 0; 
+}
+
+/* Category Badge */
+.top-picks .badge-category {
+  background-color: #FFF3CD;
+  color: #35211f;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Typography */
+.top-picks .card-title {
+  font-family: "Mona Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000326;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.top-picks .card-text {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Author Info */
+.top-picks .author-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+}
+
+.top-picks .author-info h6 {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+
+.top-picks .author-info small {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 12px;
+  color: #777;
+}
+
