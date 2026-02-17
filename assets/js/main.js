@@ -156,4 +156,36 @@
     });
   });
 
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Target the grid container
+    const grid = document.querySelector('#blog-grid');
+
+    // 2. Initialize Isotope
+    const iso = new Isotope(grid, {
+        itemSelector: '.blog-item',
+        layoutMode: 'fitRows', // This works well with Bootstrap grids
+        transitionDuration: '0.6s' // Controls the speed of the sliding animation
+    });
+
+    // 3. Set up the click events for your buttons
+    const filterButtons = document.querySelectorAll('.btn-filter');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove 'active' styling from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add 'active' styling to the clicked button
+            this.classList.add('active');
+
+            // Grab the selector (e.g., '.productivity' or '*')
+            const filterValue = this.getAttribute('data-filter');
+
+            // Tell Isotope to rearrange the grid!
+            iso.arrange({ filter: filterValue });
+        });
+    });
+});
+
 })();
+

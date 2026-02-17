@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Allow major SEO crawlers
+User-agent: SemrushBot
+Allow: /
+
+User-agent: SemrushBot-SA
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Optional: block sensitive folders
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://astraresults.com/sitemap.xml
