@@ -58,7 +58,7 @@ RewriteRule . /index.php [L]
   </FilesMatch>
 
   <FilesMatch "\.(html|php)$">
-    Header set Cache-Control "no-cache"
+    Header set Cache-Control "public, max-age=300, s-maxage=3600"
   </FilesMatch>
 </IfModule>
 
@@ -75,4 +75,6 @@ RewriteRule . /index.php [L]
   AddOutputFilterByType DEFLATE application/xhtml+xml
   AddOutputFilterByType DEFLATE application/rss+xml
   AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/svg+xml
 </IfModule>
