@@ -6388,6 +6388,7 @@ section,
 }
 
 .blog-details .title {
+  font-family: "integral-cf", sans-serif;
   color: var(--heading-color);
   font-size: 28px;
   font-weight: 700;
@@ -6400,9 +6401,18 @@ section,
 }
 
 .blog-details .content h3 {
+  font-family: "integral-cf", sans-serif;
   font-size: 22px;
   margin-top: 30px;
   font-weight: bold;
+}
+
+.blog-details .content p {
+  color: var(--default-color);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 18px;
 }
 
 .blog-details .content blockquote {
@@ -6418,6 +6428,7 @@ section,
   color: var(--default-color);
   line-height: 1.6;
   margin-bottom: 0;
+  font-family: "Mona Sans", sans-serif;
   font-style: italic;
   font-weight: 500;
   font-size: 22px;
